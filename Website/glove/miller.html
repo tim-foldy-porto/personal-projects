@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+    html {
+      background-color: #F6F6F0;
+    }
+    .left_box {
+      width: 50%;
+      height: 600px;
+      float: left;
+      border-style: none;
+    }
+    .right_box {
+      width: 50%;
+      height: 600px;
+      float: right;
+      border-style: none;
+    }
+    .welcome_box {
+      float: right;
+      border-style: solid;
+      border-color: #FF6600;
+      border-width: thick;
+      background-color: white;
+      width: 200px;
+      margin: 200px 50px 50px 50px;
+      padding: 15px;
+      font-family: Helvetica;
+    }
+    .vid {
+      float: left;
+      height: 100%;
+    }
+    .text {
+      clear: both;
+      width: 50%;
+      margin-left: 25%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-style: none;
+      font-family: Helvetica;
+    }
+    .title {
+      padding: 10px;
+      margin: 50px;
+      font-family: Helvetica;
+      text-align: center;
+      font-weight: bold;
+      font-size: 40px;
+      background-color: yellow;
+    }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">
+      Vulcan demonstration
+    </div>
+    <div class="left_box">
+      <div class="welcome_box">
+        Hello Miller Prize reviewer! We hope this finds you well. Here's a video demonstration of the most recent prototype of our haptic glove.
+      </div>
+    </div>
+    <div class="right_box">
+      <video class="vid" autoplay loop muted>
+        <source src="proto2.mp4">
+      </video>
+    </div>
+    <div class="text">
+      As you can see, it's not quite finished &mdash; the circuit boards are exposed and some of the wires need terminating &mdash; but aside from that this is the final form factor for the glove. To stop the glove from popping off the back of my hand (like in the video) we're making straps to go around the user's palm and wrist. Keep scrolling for some additional photos of the glove, or <a href="glove.html">click here</a> to read more about the technical details of the glove.
+    </div>
+    <img src="proto2_1.jpg" class="center">
+    <div class="text">
+      Our glove measures 13 joints on the hand (none on the pinky unfortunately) and 3 angular coordinates for the palm. In addition, it provides users with tactile feedback (<a href="tactilefeedback.html">vibration + skin stretch</a>). You can see a tactile module on the thumb in the picture above. We've also made tactile modules for the other fingers, but those modules are detachable so they're not shown here &mdash; it's a feature not a bug!
+    </div>
+    <img src="proto2_2.jpg" class="center">
+    <div class="text">
+      We're pretty happy with this version of the glove and can't wait to deliver it to our beta testers. They're all artist-types who are ok with the unpolished look of the product. In fact, the hacker nature of it is one of the things they find most appealing! Our next version will be much more consumer friendly, and will include global position tracking, force feedback, and a suite of software products that let users unleash their creativity.
+    </div>
+    <img src="proto2_3.jpg" class="center">
+    <div class="text">
+      Here's a bonus image of some of the glove parts before assembly!
+    </div>
+
+  </body>
+</html>

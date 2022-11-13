@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Publications</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      white {
+        color: white;
+      }
+      .column {
+        float: left;
+        padding-left: 50px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+      .date{
+        width: 15%;
+        padding-top: 20px;
+        color: black;
+        font-family: Helvetica;
+        font-size: 150%;
+      }
+      .title {
+        width: 35%;
+        font-family: "Helvetica";
+        font-size: 200%;
+      }
+      .content {
+        width: 50%;
+        text-align: justify;
+      }
+      .center {
+        text-align: center;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./writing.html">Writing</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./publications.html">Publications</a>
+      <a href="./classNotes.html">Class Notes</a>
+      <a href="./music.html">Music</a>
+    </nav>
+  <h1>Publications</h1>
+
+  <div id="welcome">
+    <p>
+      Here are some of the academic things I've written. I've divided them into four sections: <em>actual publications</em>,
+      where I've put documents that have actually been published or are in submission; <em>other publications</em>, where
+      I've put things like final reports for classes; <em>architecture theory</em>, where I've put all the papers that I wrote
+      for my architecture classes over the years; and <em>other essays</em>, where I've put any other essay that I feel is worth
+      sharing. Most of the "other publications" are fairly finished and in the style of a journal submission,
+      but perhaps not up to the research standard of most journals.
+    </p>
+
+    <h4>Jump to section</h4>
+    <ul>
+      <li><a href=#actual-publications>Actual publications</a></li>
+      <li><a href=#other-publications>Other publications</a></li>
+      <li><a href=#architecture-theory>Architecture theory</a></li>
+      <li><a href=#other-essays>Other essays</a></li>
+    </ul>
+  </div>
+
+  <br><br>
+
+  <div id="actual-publications" class="column" style="padding-left: 0px">
+    <h2 class="center">Actual Publications</h2>
+
+    <div class="column title">
+      Activation Density driven Energy-Efficient Pruning in Training
+    </div>
+    <div class="column content">
+      <em>
+      The process of neural network pruning with suitable fine-tuning and retraining can yield networks with considerably fewer parameters than the original with comparable degrees of accuracy. Typically, pruning methods require large, pre-trained networks as a starting point from which they perform a time-intensive iterative pruning and retraining algorithm. We propose a novel pruning in-training method that prunes a network real-time during training, reducing the overall training time to achieve an optimal compressed network. To do so, we introduce an activation density based analysis that identifies the optimal relative sizing or compression for each layer of the network. Our method removes the need for pre-training and is architecture agnostic, allowing it to be employed on a wide variety of systems.
+      </em>
+      <a href="./publications/Activation_density_driven_energy-efficient_pruning_in_training copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">November 2019</div>
+  </div>
+
+
+
+  <div id="other-publications" class="column" style="padding-left: 0px">
+    <h2 class="center">Other Publications</h2>
+
+    <div class="column title">
+      Examination of Various Models of Viscoelasticity
+    </div>
+    <div class="column content">
+      <em>
+      We explore the Maxwell model for viscoelasticity with the aim of evaluating its efficacy in describing the properties of animal muscle. While it succeeds in modeling the two-regime frequency response of real muscle, we find that the Maxwell model fails to accurately describe muscle's step response, which can be characterized by stretched exponential decays. In light of this, we propose methods for modifying the Maxwell model such that stretched exponentials solve the governing differential equations. Additionally, we find that a fractional differential operator is necessary for the production of stretched exponential solutions; we discuss methods for dealing with such operators, with applications to control theory and robotics.
+      </em>
+      <a href="./publications/biomechanics.pdf">Read more...</a>
+    </div>
+    <div class="column date">December 2019</div>
+
+
+    <div class="column title">
+      A Novel Variable-Stiffness Finger Exoskeleton for Virtual Reality Applications
+    </div>
+    <div class="column content">
+      <em>
+      A hand exoskeleton that can produce forces in both flexion and extension, as well as provide a variable stiffness to the wearer, finds applications in virtual reality (VR). In VR, the objective is to convince the user that a given experience is real; part of this process involves providing realistic force- and tactile-based sensations to the user when they interact with virtual objects. We propose a novel hand exoskeleton that can provide forces comparable to other state-of-the-art exoskeletons while also adding the ability to vary stiffness. Additionally, our mechanism improves wearer comfort by producing for a two-stage actuation process - translation then rotation - which allows the exoskeleton to closely track the wearer's joints. In VR applications where the user interacts with soft objects, the ability to modulate perceived stiffness is paramount to producing a believable experience.
+    </em>
+      <a href="./publications/exoskeleton.pdf">Read more...</a>
+    </div>
+    <div class="column date">December 2019</div>
+
+
+    <div class="column title">
+      Verification of the Winnow Algorithm for Error Correction in Quantum Key Distribution
+    </div>
+    <div class="column content">
+      <em>
+        In this study, we implement and verify the Winnow error correction algorithm that is presented in "Fast, efficient error reconciliation for quantum cryptography", by W. T. Buttler et al. Using a pulsed laser, a variable polarizer, and measurement devices for two non-orthogonal states - as outlined in the B92 protocol presented by Charles Bennett in 1992 - we verify the error correcting statistics that are claimed in the original Winnow paper. Our results are consistent with the theoretical model proposed by Buttler et al., and we reproduce their experimental results with a high degree of faithfullness.
+      </em>
+      <a href="./publications/Quantum_Encryption copy.pdf">Read more...</a>
+    </div>
+    <div class="column date" style="padding-bottom: 150px">March <white>ll</white> 2019</div>
+
+
+    <div class="column title" >
+      Development of a High-Temperature PID Controller with 0.25K Precision
+    </div>
+    <div class="column content">
+      <em>
+        We describe the design and development of a PID temperature controller with 0.25 C precision for an oven operating between 300 C and 600 C. We present the considerations that went into the mechanical, electrical,
+        and software design for the controller, as well as the results we obtained and points of future improvement.
+      </em>
+      <a href="./publications/Draft_2_final_report copy.pdf">Read more...</a>
+    </div>
+    <div class="column date" style="padding-bottom: 110px">May <white>lllll</white> 2019</div>
+
+
+    <div class="column title">
+      Measuring Critical Exponents using Numerical Simulations for the 2-D Ising Model
+    </div>
+    <div class="column content">
+      <em>
+        In this experiment we used numerical methods to simulate the two-dimensional Ising Model in a 100 by 100 spin lattice. Using the Metropolis algorithm to select a sample of microstates from the system, we estimated the thermodynamic averages of energy, magnetism and spin correlation at a range of temperatures. Measuring these quantities and the derived quantities heat capacity, magnetic susceptibility and correlation length, we were able to observe the phase-transition-like behaviour of this finite system, estimating the critical temperature (Tc) and the critical exponents. While our estimates for Tc were in close agreement with the theoretical value for an infinite lattice, our estimates of the critical exponents and demonstration of power-law behaviour near the critical temperature were less accurate. Effects from the finite-size of our lattice as well as biases introduced by our sampling method may be able to account for these discrepancies.
+      </em>
+      <a href="./publications/Ising_Report copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">April <white>lllll</white> 2019</div>
+
+
+    <div class="column title">
+      T1 relaxation times in glycerin samples of varying concentration
+    </div>
+    <div class="column content">
+      <em>
+        In this study, we show that there is a linear relationship between the concentration of glycerine in a sample and T1, the sample's thermal relaxation time under pulsed nuclear magnetic resonance (pNMR) imaging. Using a .4T magnetic field, we performed measurements of T1 on mixtures of glycerin and water. As expected, we found that T1 scaled linearly with the ratio of glycerine to water. The relationship between the two variables - concentration of glycerine G and T1 - is described by: T1 = 346.68 - 3.27G. Due to the linearity of T1 with respect to the volume of glycerine, we conclude that the two substances, glycerine and water, are negligibly reactive with each other and that the NMR technique is a promising method for testing the purity of a glycerin solution.
+      </em>
+      <a href="./publications/Pulsed_NMR copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">February 2019</div>
+
+
+    <div class="column title">
+      Applications in RFID Technology
+    </div>
+    <div class="column content">
+      <em>
+        "... The first part of our project consisted of designing and building a device that could read the data from an FSK encoded RFID card. For convenience, we tested our reader using a standard issue Yale ID card, which we knew to operate at a frequency of 125 kHz based on documentation from the card manufacturer. Additionally, from the international standard for contactless integrated circuit cards (ISO/IEC 14443-4), we deduced that Yale ID cards used FSK modulation and were encoded by the processes of Manchester encoding and decimation, which will be discussed later in the results section. ..."
+      </em>
+      <a href="./publications/Final Report copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">December 2017</div>
+
+  </div>
+
+  <div id="architecture-theory" class="column" style="padding-left: 0px">
+    <h2 class="center">Architecture Theory</h2>
+
+    <div class="column title">
+      The Massive Style
+    </div>
+    <div class="column content">
+      <em>
+        "... I propose the existence of a style, rather than simply style, to distinguish between the latter term, which describes the general notion of the rationale behind artistic form-creation, and the former term, which instead suggests that a style is a singular element in a larger set of styles. Each element in such a set provides some basis for a grouping of elements from a set of artistic creations. To conjure a style out of thin air, according to this definition, it suffices to identify among artworks a set of shared attributes&mdash;generators of the style. The Neo-plasticists identified a priori the basis of particular versus universal; instead of grouping art works after they had been created, they first identified the axis along which beauty was found (representation of the universal) and then created art to match the style. ... "
+      </em>
+      <a href="./publications/The_Massive_Style.pdf">Read more...</a>
+    </div>
+    <div class="column date">May <white>lllll</white> 2020</div>
+
+
+    <div class="column title">
+      Spatial Complexity and Urbanism at Yale
+    </div>
+    <div class="column content">
+      <em>
+        "... Through an analysis of three generations of architecture at Yale&mdash;gothic revival, modernism, and postmodernism&mdash;along with four respective colleges&mdash;Berkeley, Morse and Stiles, and Benjamin Franklin&mdash;we can observe distinct types of spatial complexity and their corresponding urbanism, each encoding information about its era: Berkeley invokes the language of dense rural villages, exuding naturalism and serenity; Morse and Stiles employ long-distance interactions between sites to impose an urbanism rooted in spatial rationalization; Franklin contains unexpected architectural features that declare an urbanism of disorder, creating a sense of character for a space that would normally be devoid of personality. ... "
+      </em>
+      <a href="./publications/Spatial complexity and urbanism at Yale copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">April <white>lllll</white> 2019</div>
+
+
+    <div class="column title">
+      The Temple of the Parking Garage
+    </div>
+    <div class="column content">
+      <em>
+        "... In his essay on the subject, <em>Monumentality</em>, Louis Kahn describes a monumentality rooted in a mastery of construction whose goal is to "convey the feeling of eternity." (Kahn 21) Kahn argues that the greatness of a monumental building lies in an enduring spiritual quality - a rich encoding of historical and cultural information into the forms of the structure. By examining Temple St. Garage through the lens of Kahn's "Monumentality," we gain insight into the interplay between human emotion and the spaces that we sculpt, and in placing Kahn's seemingly superficial musings on construction in historical context, we are able to see how it is the scope of a building - its attempt to preserve for eternity a moment in time - that allows it to achieve Kahn's notion of the spiritual. ... "
+      </em>
+      <a href="./publications/Monumentality P3 copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">November 2017</div>
+
+
+    <div class="column title">
+      Re-defining London Through Architecture: 1945 - 1970
+    </div>
+    <div class="column content">
+      <em>
+        "... The notion of physical identity is but one component of a much larger identity, a spirit that
+        London possesses. As we will see, the connections between architecture and definition form a deep
+        and complex web, interwoven with ideas of movement, culture, and philosophy. Thus the physical
+        deterioration perceived in the London County Council plan was in many ways indicative of and
+        related to a very real deterioration of London's identity. When we look at the convoluted and
+        neglected network of London's roads and infrastructure at the end of the 1940s, we can see that its
+        physical aspect was in a position to be recreated. In terms of the other components of its identity, we
+        will see that they were also in a state of disrepair. This idea will become clearer through an
+        examination of the works of Thomas Sharp, an English urban planner and architectural critic who
+        wrote at length about the relationship between physical city and its extra-physical identity. ..."
+      </em>
+      <a href="./publications/Re-imagining london copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">April <white>lllll</white> 2017</div>
+
+
+    <div class="column title">
+      Brutalist City
+    </div>
+    <div class="column content">
+      <em>
+        "... The remedy to this disconnect between modern architecture and modern Londoner was proposed in the form of "The New Brutalism" by two English architects: Allison and Peter Smithson. Similar to the international style in its rectilinear geometry, the New Brutalism differed most notably in its material choice and in its ethical statement. The Smithsons conformed to post-war Londoners' need for relatable architecture, not aloof or antiquated, and they defined brutalism by its attempt to confront a "mass-production society, and drag a rough poetry out of the confused and powerful forces which are at work." In an examination of the relationship between London's physical space and the community around which it was created, the causes of the rift between architectural modernism and London as a city become apparent. And where the international style conflicted with London's post-war ethical direction, the New Brutalism was able to help guide the population into its new place in the world. ..."
+      </em>
+      <a href="./publications/Brutalist city copy.pdf">Read more...</a>
+    </div>
+    <div class="column date">March <white>ll</white> 2017</div>
+  </div>
+
+  <div id="other-essays" class="column" style="padding-left: 0px">
+    <h2 class="center"> Other Essays</h2>
+
+  </div>
+
+  </body>
+</html>

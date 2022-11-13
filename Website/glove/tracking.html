@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      Red {
+        color: red;
+      }
+      html {
+        background: url(glove.png) repeat center fixed;
+        background-size: 334px 217px;
+      }
+      center {
+        margin-top: 52px;
+        text-align: center;
+        color: white;
+        font-size: 500%;
+        background-color: black;
+      }
+      center:hover {
+        /* transform: rotate(-180deg); */
+        color: pink;
+      }
+
+      b {
+        font-family: "Helvetica";
+      }
+      b:hover {
+        color: yellow;
+      }
+
+      back {
+        float: left;
+        margin-left: 30px;
+        font-size: 300%;
+        padding: 20px;
+        text-decoration: underline;
+        color: black;
+        background-color: white;
+      }
+      back:hover {
+        transform: rotate(350deg);
+      }
+      .text {
+        text-align: left;
+        padding: 40px;
+        height: 90%;
+        width: 70%;
+        margin-left: 15%;
+        font-family: "Helvetica";
+        font-size: 140%;
+        margin-right: 100px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        background-color: white;
+      }
+      i {
+        padding: 40px;
+        width: 528px;
+        height: 244px;
+        margin-left: 10%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="welcome">
+    <center>tracking</center>
+    <a href="./howitworks.html"><back> &larr; Back </back></a>
+
+    <div class="text">
+      <em>11 November 2020</em>
+      <br><br>
+      The glove uses a combination of rotary potentiometers and flex sensors (like the ones found in the <a href="https://en.wikipedia.org/wiki/Power_Glove"> Nintendo Power Glove</a>) to track the various joints on the hand. Our model of the human hand assumes 20 degrees of freedom (DOFs) plus 6 spatial DOFs. Although there is some debate surrounding the number of DOFs of the CMC joint on the thumb, we have assumed that is possesses only two. Technically, the axes along which we measure the CMC joint are not the simplest that one could construct &mdash; two orthogonal axes passing through the joint center &mdash; but nevertheless they span the state space of the CMC joint.
+      <br><br>
+
+      <img src="trackingoverview.png" alt="Tracking overview" width="1123" height="612">
+      <br><br>
+
+      To achieve our goal of minimizing the cost of the glove, we have tried to use rotary potentiometers wherever possible, and use flex sensors only where necessary.
+      We chose to measure joint angles directly, with resistive sensors, as opposed to using a vision-based tracking method in order to avoid sensitivity to hand occlusion. Additionally, the frequency responses of our potentiometers and flex sensors are orders of magnitude above what the human hand is capable of, meaning the sensory system itself is a negligible source of lag. The sensor data processing algorithm has a similarly minimal lag, due to the electrical simplicity of reading resistive sensors: all it takes is an ADC reading followed by an approximately linear conversion from voltage-space to angle-space.
+      <br><br>
+      Measurement of hand orientation is done using a 3-axis accelerometer / gyroscope mounted within the white polygon shown above. All finger angle data is given in relative terms. As anyone who has ever worked on localization before can attest to, measuring the three translational DOFs is exponentially harder than measuring the three rotational DOFs. The state-of-the-art in global position tracking is <strong>inside-out tracking</strong>, the system currently used by the Oculus Quest. This is the gold standard in terms of user-experience since there are no base stations to set up or pesky calibration routines to perform. The aesthetic beauty of this system, however, comes at the designer's expense &mdash; such systems are notoriously difficult and time-consuming to implement. There is no question that <em>the consumer version of our glove will use an inside-out system</em>. However, early versions of the glove, including those delivered to beta testers, will likely use some combination of dead reckoning, outside-in, and inside-out global position tracking. The nature of that combination will of course shift towards inside-out as the development of the glove progresses.
+
+
+  </body>
+</html>

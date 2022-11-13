@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teleoperated avatar</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../blog.html">Blog</a>
+      <a href="../../projects.html">Projects</a>
+      <a href="../../classNotes.html">Class Notes</a>
+      <a href="../../music.html">Music</a>
+    </nav>
+  </body>
+    <h1>High-level design of lower body</h1>
+    <p>The hip joint is the same as the calf and foot joint presented below, but with the ball end
+    at the hip instead of at the knee (so upside down). The knee is a simple revolute joint. I'm 99%
+    that this design captures all of the DOFs of the human lower body. Some advantages to this design:
+    it's buildable (ball joints are readily available); it's easy to add springs to each piston for the
+    purpose of adding series compliance to the body. Disadvantages: I'm not sure the range of motion of
+    the joints given the limited range of motion of the ball joints that comprise them.</p>
+
+    <h4>Standing</h4>
+    <img src="./roughCAD/standing.jpg"
+     alt="standing"
+     width="700" height="500"/>
+
+     <h4>Running</h4>
+     <img src="./roughCAD/running.jpg"
+      alt="running"
+      width="700" height="500"/>
+
+      <h4>Balancing on one leg</h4>
+      <img src="./roughCAD/balancing_on_one_leg.jpg"
+       alt="balancing on one leg"
+       width="700" height="500"/>
+
+
+
+    <h2>Initial design for 3-DOF calf and foot joint</h2>
+    <p>The foot section (lower circular plate) can move in 3 ways: rotation about the central axis
+    of the calf, tilt left to right, and tilt forwards and backwards.</p>
+
+    <img src="./roughCAD/calf1.png"
+     alt="Calf + foot position 1"
+     width="215" height="367"/>
+
+     <img src="./roughCAD/calf2.png"
+      alt="Calf + foot position 1"
+      width="210" height="360"/>
+
+      <img src="./roughCAD/calf3.png"
+       alt="Calf + foot position 1"
+       width="206" height="351"/>
+</html>

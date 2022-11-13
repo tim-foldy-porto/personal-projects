@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stepper driver circuit</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../classNotes.html">Class Notes</a>
+      <a href="../music.html">Music</a>
+      <a href="../runningPlans.html">Running Stuff</a>
+    </nav>
+  </body>
+    <h1>Stepper driver circuit</h1>
+    <p> Here's a simple circuit to drive the coils in a stepper motor. Essentially, the circuit
+      uses two H-bridges (one for each coil), buffered by op-amps and controlled by D-type flip-flops
+      to get the proper timing pattern. To get variable speeds for the stepper, simply adjust the
+      clock rate of the flip-flops. Also, note that the coils of the stepper would replace the
+      1k resistors in an actual implementation of this circuit.
+    </p>
+    <img src="./stepperDriver/stepperDriverSchematic.png"
+    alt="stepper driver circuit"
+    width="927" height="637"/>
+
+    <p>And here's a video of the circuit in action (green indictes voltage):</p>
+
+    <video width="1253" height="783" controls>
+      <source src="./stepperDriver/circuitVideo.mov">
+    </video>
+</html>

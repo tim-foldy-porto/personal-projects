@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alf Cobot</title>
+    <style>
+      .row {
+        display: flex;
+      }
+
+      .column {
+        flex: 33.33%;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../classNotes.html">Class Notes</a>
+      <a href="../music.html">Music</a>
+      <a href="../runningPlans.html">Running Stuff</a>
+    </nav>
+  </body>
+    <h1>Alf Cobot</h1>
+    <div class="row">
+      <div style="width: 50%; margin: 30px; font-family: Helvetica; line-height: 1.3 ">
+        This was a group project for a class I took in college called "Making It." The assignment was to make something, so we chose to make a voice-controlled robotic arm called Alf Cobot. There were four of us working on this: two worked on the mechanical design and construction of the arm, I built the embedded control electronics, and another built an iOS app that took voice commands and sent control signals to the electronics stack over BLE. It was a fun project and I got to learn about stepper driver circuits and the BLE protocol.
+        <br><br>
+        Today (2021) the electronics seem pretty basic to me, but back then (2018) it was a decent challenge for me to design and build this system. The architecture consists of an Arduino Mega connected to a BLE UART board (the input) and 5 DRV8825 stepper driver boards (the output) which drive the 5 stepper motors on the robotic arm. If this were today, I could easily package all this on a single board, but this was then, so I was still wiring off-the-shelf boards together rather than making my own.
+        <br><br>
+        Here's two pics of ALF Cobot before it was all wired up:
+        <br><br>
+        <img src="alf/on_bench.jpg" style="width: 40%;">
+        <img src="alf/hero_shot.jpg" style="width: 58%">
+      </div>
+      <video autoplay muted style="width: 25%; margin-left: 10%;">
+        <source src="alf/alf_vid.mov">
+      </video>
+    </div>
+    <div class="row">
+      <div style="width: 24%; margin: 30px; font-family: Helvetica; line-height: 1.3; font-weight: bold; color: red;">
+        The electronics before they were nicely boxed up:
+        <br><br>
+        <img src="alf/messy.png" style="width: 100%">
+      </div>
+      <div style="width: 40%; margin: 30px; font-family: Helvetica; line-height: 1.3; font-weight: bold; color: green;">
+        And after:
+        <br><br>
+        <img src="alf/clean.png" style="width: 100%">
+      </div>
+    </div>
+</html>

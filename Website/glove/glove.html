@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      White {
+        color: white;
+      }
+      html {
+        background: url(glove.png) repeat center fixed;
+        background-size: contain;
+      }
+      center {
+        margin-top: 50px;
+        text-align: center;
+        color: black;
+        font-size: 500%;
+        background-color: white;
+        /* font-family: "Helvetica"; */
+      }
+      center:hover {
+        /* transform: matrix(1.2, 0.2, -0.2, 1.2, 0, 0); */
+        /* color: green; */
+        font-family: "Helvetica";
+        /* font-weight: 1000; */
+      }
+
+      a.funlink {
+        position: absolute;
+        font-family: "Helvetica";
+        font-size: 200%;
+        left: 20px;
+        font-weight: 1000;
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+      }
+      /* a:visited {
+        color: white;
+      } */
+      a:hover {
+        /* transform: rotate(10deg); */
+        /* text-decoration: underline; */
+        color: red;
+      }
+
+      box {
+        text-align: left;
+        height: 380px;
+        width: 420px;
+        position: fixed;
+        left: 60px;
+        background-color: blue;
+        transform: scale(1.1);
+        transition: 0.5s;
+        border-style: none;
+      }
+      /* box:hover {
+        transform: scale(1.1);
+        background-color: blue;
+        border-style: none;
+      } */
+      easteregg {
+        position: fixed;
+        left: 75%;
+        top: 15%;
+        color: yellow;
+        background-color: #FFFF00;
+        height: 300px;
+        width: 300px;
+        transform: scale(0.05);
+      }
+      easteregg:hover {
+        color: black;
+        transform: scale(1);
+      }
+      .cdj {
+
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="welcome">
+    <center>telex glove</center>
+
+    <box>
+      <a class="funlink" href="howitworks.html" style="top: 40px">How it works</a>
+      <a class="funlink" href="about.html" style="top: 120px">About TeleX</a>
+      <a class="funlink" href="contactus.html" style="top: 200px">Contact us</a>
+      <a class="funlink" href="earlyaccess.php" style="top: 280px">Sign up for early access</a>
+    </box>
+    <p style="position:fixed; left:38%; top:72%; color:black; font-size:150%;"> glove redacted for IP reasons </p>
+
+    <easteregg>
+      <strong>You've found an easter egg!</strong>
+      <br><br>
+      As your reward, here's <a href="https://www.bzarg.com/p/what-bitcoin-shows-us-about-how-money-works/">a good article</a> about the shortcomings of bitcoin.
+    </easteregg>
+
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Constant Force Linkage</title>
+    <style>
+      .title {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 200px;
+        position: absolute;
+        width: 40%;
+        border: 5px solid green;
+        text-align: center;
+        background-color: #FFEE4A;
+      }
+      .helv {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 30px;
+        position: relative;
+        left: 50px;
+        padding: 5px;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../classNotes.html">Class Notes</a>
+      <a href="../music.html">Music</a>
+    </nav>
+
+    <video width="1920" height="1080" autoplay loop muted style="position:relative;">
+      <source src="./constantForce/IMG_5498.MOV">
+    </video>
+    <div>
+      <p class="title" style="top:-170px">Constant Force Linkage</p>
+      <img src="./constantForce/arrow1.jpg" style="position:absolute; left:900px; top:200px;">
+      <p style="position:absolute; left:900px; top:150px; font-size:80px">Scroll down</p>
+    </div>
+
+    <p class="helv">For MENG 778 &mdash; Advanced Robotic Mechanisms &mdash; September 2019</p>
+
+    <p style="position:relative; top:0px; left:50px; width:50%;" >This mechanism was designed and built solely by me following the <a href="http://www.me.unm.edu/~starr/teaching/me314/freud.pdf">methodology described by Gregory Starr</a> of the University of New Mexico.  In this paper, Starr presents a way to find link lengths for a four bar linkage such that the angles of the rocker and crank obey a specific functional relationship. By defining three points (characteristic of the specified function) along the rocker's path, Starr shows that it is possible to generate a simple system of equations that will uniquely constrain the link lengths. Since I wanted to create a constant force mechanisms, I created a linkage such that the angle of the rocker changed like the square root of the angle of the crank. Then, by connecting the rocker to a Hooke's law spring (which stores energy like position squared), the crank experienced an approximately constant force.
+
+    <p style="position:relative; top:0px; left:50px; width:50%;"><strong>Fabrication process:</strong> Most of the parts for this mechanism were 2.5-dimensional, and thus able to be fabricated with a laser cutter. There were two parts&mdash;the pulleys attached to the rocker and the crank&mdash;that were properly three dimensional and were created by a 3D printer. The mechanism was assembled using 1/4-20 screws. To couple the rocker pulley to the spring and the crank pulley to the output force, I used 50 lb. fishing line.
+
+    <p class="helv" style="top:30px;">MEDIA</p>
+
+    <img src="./constantForce/IMG_5502.png" style="width:50%; position:relative; left:50px;">
+    <video autoplay loop muted style="width:40%; position:relative; left:0px;">
+      <source src="./constantForce/cad.mov">
+    </video>
+    <img src="./constantForce/IMG_5495.png" class="center" style="width:50%; position:relative; left:0px; top:0px;">
+  </body>
+</html>

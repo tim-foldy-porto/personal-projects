@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exoskeleton arm</title>
+    <style>
+      /* Container holding the image and the text */
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      /* Bottom left text */
+      .upper-left {
+        color: white;
+        font-family: "Times New Roman";
+        font-size: 450%;
+        position: absolute;
+        top: 8px;
+        left: 16px;
+      }
+      .column {
+        float: left;
+        width: 32%;
+        padding: 5px;
+      }
+      .column2 {
+        float: left;
+        width: 49%;
+        padding: 5px;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../classNotes.html">Class Notes</a>
+      <a href="../music.html">Music</a>
+      <a href="../runningPlans.html">Running Stuff</a>
+    </nav>
+  </body>
+
+    <br><br>
+    <div class="container">
+      <img src="./secondStrength/Final_2.jpg" style="width:100%">
+      <div class="upper-left">Exoskeleton Arm</div>
+    </div>
+
+    <br>
+
+    <p>
+      This device, dubbed "Second Strength," is capable of giving the wearer 100 lbs. of additional strength. I built it
+      over the summer of 2017 along with a teammate: I handled the mechanical design, he handled the electrical design,
+      and we both contributed to the control system.
+    </p>
+
+    <h2>Design considerations</h2>
+    <p>
+      For me, the arm is as much a sculptural piece as it is a mechanical device, and every decision I made regarding the physical appearance of the exoskeleton was based in both functionality and aesthetic. Of course, I decided the overall shape of the arm and the layout of the components on a structural and ergonomic basis: the primary material, 6061 aluminum U-channel, has a good strength-to-weight-to-cost ratio, namely compared to other geometries of aluminum. The motors on the upper arm segment lie in the same spot as the corresponding human muscle, in this case the bicep, to help mimic the experience of using your own arm. The four degrees of freedom in the human arm are represented by the four segments of the exoskeleton.
+      <br><br>After the basic design constraints were met, I was able to let my artistic tendencies influence my design choices. I considered concealing the motors, metal, and electronics in a sleek plastic covering, but I decided that humanizing the arm in such a way would be a mistake. I instead wanted to create an inorganic machine to complement, not challenge, its human wearer. Since exoskeletons are meant to be powerful devices, I wanted to convey strength and complexity through the design. The architect Paul Rudolph often spoke of "symbols of structure," which he defined as architectural elements that, while not structurally significant, represented the parts of the building that were. On the exoskeleton, I incorporated symbols of complexity by mounting many of the electronics on the exoskeleton itself, making them hypervisible to its wearers. I wanted to immerse the wearer in wires and circuitry because through that, along with vivid 3D-printed colors, I hoped to evoke a complicated and mysterious unit, instilling feelings of wonder and excitement in observers.
+    </p>
+
+    <br>
+    <h2>Pictures of the final thing</h2>
+    <div class="row">
+      <div class="column">
+        <img src="./secondStrength/Final_1.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/Final_3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/Final_4.jpg" style="width:100%">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column2">
+        <video style="width:100%" controls>
+          <source src="./secondStrength/Test_1.mov">
+        </video>
+      </div>
+      <div class="column2">
+        <video style="width:100%" controls>
+          <source src="./secondStrength/Test_2.mov">
+        </video>
+      </div>
+    </div>
+    <br>
+    <h2>Pictures of the fabrication process</h2>
+    <div class="row">
+      <div class="column">
+        <img src="./secondStrength/Fab_1.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/Fab_3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/Fab_4.jpg" style="width:100%">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column2">
+        <img src="./secondStrength/Fab_2.jpg" style="width:100%">
+      </div>
+      <div class="column2">
+        <video style="width:50%" controls>
+          <source src="./secondStrength/Ratchet.mov">
+        </video>
+      </div>
+    </div>
+    <h2>Pictures of the initial CAD</h2>
+    <div class="row">
+      <div class="column">
+        <img src="./secondStrength/CAD_1.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/CAD_2.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="./secondStrength/CAD_3.jpg" style="width:100%">
+      </div>
+    </div>
+
+</html>

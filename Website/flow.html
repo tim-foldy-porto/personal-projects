@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Flow Calculator</title>
+  </head>
+
+  <body>
+
+  <h1>Flow Calculator</h1>
+
+<p> <strong>Note:</strong> these are <em>rough</em> estimates. The output result is reported +/- 5 liters per min.
+
+<form id="fishWeight" action="">
+<fieldset>
+	<p>
+		<label for="dh">Height from zero (mm)</label>
+		<input id="dh" name="dh" type="number" step="0.01"/>
+	</p>
+
+	<p>
+		<input type="submit" value="Calculate flow rate" />
+		or
+		<input type="reset" value="Reset" />
+	</p>
+	<p>
+		<label for="flow">Flow rate (l/m)</label>
+		<input id="flow" name="Q" type="number" />
+	</p>
+</fieldset>
+</form>
+
+<script>
+(function () {
+	function calculateFishWeight(dh) {
+		dh = parseFloat(dh) * 2;
+    var fa, rho, g, a, b, dp, q;
+    fa = 0.0000727679; //the area ratio of the venturi tube
+    rho = 997; //density of water (kg/m^3)
+    g = 9.88; //gravity, duh
+    a = 0.153; //quadratic coefficient
+    dp = (dh * rho * g)/(1000 * a);
+    // q = Math.round(60000 * fa * Math.sqrt(dp)); //60,000 to convert m^3/s to l/m
+    q = Math.round(Math.sqrt(230.324 * (dh + 5.76077))) //experimental results
+		return (q);
+	}
+
+	var fishWeight = document.getElementById("fishWeight");
+	if (fishWeight) {
+		fishWeight.onsubmit = function () {
+			this.flow.value = calculateFishWeight(this.dh.value);
+			return false;
+		};
+	}
+}());
+</script>
+
+
+  </body>
+</html>

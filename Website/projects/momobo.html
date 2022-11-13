@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Momobo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+      html {
+        /* background: url("momobo/logo.png") repeat center fixed; */
+        /* background-size: 9% */
+      }
+      body {margin:0;}
+      .navbar {
+        overflow: hidden;
+        background-color: white;
+        border-bottom-style: solid;
+        border-width: 0.8px;
+        border-color: lightgrey;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: left;
+        width: 10%;
+        display: block;
+        color: #1b2733;
+        text-align: center;
+        padding: 18px 16px;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: AtlasGrotesk-editor-rtl, AtlasGrotesk-editor, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen, Ubuntu, Cantarell, “Open Sans”, “Helvetica Neue”, sans-serif;
+        font-weight: 200;
+      }
+
+      .navbar a:hover {
+        /* background: orange; */
+        color: #0070e0;
+      }
+
+      .main {
+        width: 100%;
+        /* margin-left: 19.5%; */
+        padding: 16px;
+        background-color: white;
+        /* height: 1500px; */
+      }
+      .main > .text {
+        padding-top: 30px;
+        margin-left: 38%;
+        width: 40%;
+        font-family: AtlasGrotesk-editor-rtl, AtlasGrotesk-editor, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen, Ubuntu, Cantarell, “Open Sans”, “Helvetica Neue”, sans-serif;
+        font-variant-ligatures: no-common-ligatures;
+        -webkit-font-smoothing: antialiased;
+        color: #1b2733;
+      }
+      .main > .text > big-head {
+        font-size: 44px;
+        letter-spacing: 0.4px;
+        line-height: 50px;
+        font-weight: 500;
+        padding-top: 90px
+      }
+      .main > .text > head1 {
+        font-size: 22px;
+        letter-spacing: 0.4px;
+        /* line-height: 50px; */
+        font-weight: 600;
+        padding-top: 90px;
+      }
+      .main > .text > normal {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+      }
+      .main > .text > normal > .quote {
+        margin: 26px 0px 26px 20px;
+        font-style: italic;
+        font-size: 15.5px;
+        line-height: 22px;
+        font-weight: 400;
+        -webkit-print-color-adjust: exact;
+        color: #2b3e52;
+      }
+      .main > .text > normal > a {
+        text-decoration: none;
+        font-family: AtlasGrotesk-editor, NotoSansHebrew-editor, NotoSansArabic-editor, NotoSansCJKjp-editor, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-variant-ligatures: no-common-ligatures;
+        -webkit-font-smoothing: antialiased;
+        color: #0070e0;
+      }
+
+      .outline {
+        position: fixed;
+        overflow: hidden;
+        left: 60px;
+        top: 150px;
+        width: 22%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .outline > .box {
+        width: 75%;
+        padding-bottom: 12px;
+        line-height: 15px;
+      }
+
+      .outline > .box > a {
+        text-decoration: none;
+        font-family: AtlasGrotesk-editor-rtl, AtlasGrotesk-editor, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen, Ubuntu, Cantarell, “Open Sans”, “Helvetica Neue”, sans-serif;
+        font-variant-ligatures: no-common-ligatures;
+        -webkit-font-smoothing: antialiased;
+        color: #637282;
+        font-size: 13px;
+      }
+      .outline > .box > a:hover {
+        color: #0070e0;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="../projects.html">&#8592; Home</a>
+    </div>
+    <div class="outline">
+      <div class="box"><a href="#momobo" style="font-weight: 700;">Momobo</a></div>
+      <div class="box" style="padding-top: 20px"><a href="#wim">What is Momobo?</a></div>
+      <div class="box" style="padding-top: 18px"><a href="#awe">A working example — plastic takeout containers</a></div>
+      <div class="box" style="padding-top: 18px"><a href="#wthbdb" >Why this hasn't been done before: global supply chains and the history of manufacturing</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#wmtcmp" >What makes the centralized model powerful?</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#the">The historical explanation</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#tte">The technical explanation</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#ofc">One final consideration: natural resources</a></div>
+      <div class="box" style="padding-top: 18px"><a href="#ecatcfp">Environmental considerations and the case for plastic</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#pistb">Plastic is simply the best</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#iprtbfte">Is plastic really that bad for the environment?</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#ipitp">If plastic isn't the problem, then what is?</a></div>
+      <div class="box" style="padding-top: 18px"><a href="#qnodp">Quick notes on decentralized production</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#milptd">Momobo is less prone to disruption</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#mdwfap">Momobo doesn’t work for all products, but it does for disposable ones</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#mcscm">Momobo could save consumers money</a></div>
+      <div class="box" style="margin-left: 20px"><a href="#mclj">Momobo creates local jobs</a></div>
+      <div class="box" style="padding-top: 18px"><a href="#c">Conclusion: how this might actually be set up</a></div>
+
+    </div>
+    <div class="main">
+      <div class="text">
+        <br><br><br><br><br><br>
+        <big-head id="momobo">Momobo</big-head><br><br>
+
+        <normal>Decentralized manufacturing and recycling</normal><br><br><br><br><br>
+
+        <head1 id="wim">What is Momobo?</head1><br><br>
+
+        <normal>
+          Momobo is a decentralized model for the production of plastic products that aims to drastically cut the environmental impact of plastic items such as takeout containers, utensils, straws, and bags. Momobo facilities reduce waste by recycling and manufacturing plastic products close to the people who use them. By tightening the loop on the production and usage cycle of plastic, Momobo…
+          <ol>
+            <li>Eliminates long shipping stages, each of which carry the cost of large carbon footprints</li>
+            <li>Ensures a higher percentage of recycled plastic actually gets recycled, instead of ending up in a landfill or in the ocean</li>
+            <li>Lowers costs for consumers by simplifying supply chains and removing expensive distribution networks</li>
+          </ol>
+          Why hasn't this been done before? Well, the short answer is hysteresis (past decisions influence future ones) and complexity (manufacturing is&mdash;<em>was</em>&mdash;hard). The long answer is long, so keep reading.
+          <br><br><br><br>
+        </normal>
+
+        <head1 id="awe">A working example — plastic takeout containers</head1><br><br>
+        <normal>
+          <br>
+          The traditional model for producing and distributing physical goods is centralized. A single manufacturing facility churns out products which are then transported all over the world for local use. The physical topology of this network looks like a hub with many spokes. At the end of products' lifetimes, they're handed over to recycling facilities (ideally) which break them down into raw materials to be used again. We can think of the whole process as a loop, or a life cycle. Let's consider the life cycle of plastic takeout containers:
+          <br><br>
+          <img src="momobo/cycle1.png" width=100%>
+          <br><br>
+          The first thing to note about this cycle is that it’s physically big. The total distance travelled along the loop is typically tens of thousands of miles, and all those shipping stages leave a huge carbon footprint. The second thing to note is that this loop is leaky—not all plastic gets recycled, and not all recycled plastic finds its way back to the production facility. Even if homes recycle perfectly, it might be more cost effective for waste sorting facilities to throw their recycling in a landfill. And given how expensive it is to sort and recycle plastic, production facilities might decide it’s cheaper to buy new plastic instead. This leads to heavy reliance on the oil and gas industry, the source of new plastic, leading to even more carbon emissions.
+          <br><br>
+          What if, instead of a centralized approach, we adopted a <em>decentralized</em> model for manufacturing and recycling. With this model, each community would have a self-sufficient Momobo facility, under whose roof the manufacturing and recycling of plastic goods would be combined. Essentially, this model tightens the loop of the centralized model by eliminating long transportation segments. Let’s keep going with our consideration of plastic takeout containers. The new life cycle would look like:
+          <br><br>
+          <img src="momobo/cycle2.png" width=100%>
+          <br><br>
+          Simpler, right? The decentralized model ditches the long shipping legs of the centralized model, eliminating outright a large portion of the carbon emmisions associated with plastic takeout containers. But its positive environmental impact goes even further. By housing recycling and manufacturing under the same roof, Momobo facilities will be able to ensure that a much higher percentage of takeout containers actually get recycled, rather than tossed in a landfill. Additionally, the logistical simplicity of this model will allow cities and consumers to better track their own carbon footprint.
+          <br><br><br><br>
+        </normal>
+
+        <head1 id="wthbdb">Why this hasn’t been done before: global supply chains and the history of manufacturing</head1><br><br>
+        <normal>
+          <br>
+          The thesis that has driven widespread adoption of the centralized manufacturing model is straightforward: <em>manufacturing equipment is expensive compared to transportation, so companies can save money by consolidating production and leveraging global shipping networks to get products into the hands of consumers.</em> There are two ways to examine the origins and the validity of this statement:
+          <ol>
+            <li>Through the lens of <strong>history</strong>, in which we’ll find that previous adoption of the centralized model encourages future adoption of the centralized model, thereby creating a hysteresis effect in which, at any given stage, it makes the most sense to continue with centralized production.</li>
+            <li>Through the lens of <strong>technology</strong>, where we’ll see how the technical complexities associated with various manufacturing processes have motivated companies to centralize and consolidate their operations.</li>
+          </ol>
+          Finally, we’ll come to two conclusions: that the benefits of the hysteresis loop are outweighed by environmental costs; and that the technical limitations that previously drove the implementation of the centralized model no longer apply. Recent developments in manufacturing technology have opened the doors for the Momobo model of decentralized production, and the mounting pressure from climate change has finally provided the impetus that companies, cities, and individuals need to switch to Momobo.
+          <br><br><br>
+          <span id="wmtcmp" style="padding-top: 90px"><strong>What makes the centralized model powerful?</strong></span>
+          <br><br>
+          In his book 7 Powers, Hamilton Helmer proposes a framework for evaluating the strength of a given business based on the “powers” that business might possess. A power, as he defines, is anything that enables a given company to achieve sustained differential profit margins over their competitors. The seven powers are: scale economies, network economies, counter-positioning, switching costs, branding, cornered resource, and scale economies. I bring this up because, for the sake of our historical analysis, the centralized model of manufacturing can reasonably be viewed as a business that has achieved near-100% market share over the decentralized model. One of the primary reasons it has been able to do this is because it has the power of switching costs. Helmer’s definition for switching costs is:
+          <div class="quote">The value loss expected by a customer that would be incurred from switching to an alternate supplier for additional purchases.</div>
+          The textbook example for this is Oracle. In the early 90s, they established themselves as the enterprise database solution. Given the level of integration their software had with other companies’ existing tech infrastructure, switching to another database software was a huge pain, so their customers simply didn’t switch and continued buying products from Oracle. Because the centralized production model isn’t exactly a product, let’s take a second to reframe Helmer’s defintion into something more useful to us. In our case, the “customer” is any person deciding to set up manufacturing operations. If, and only if, manufacturing has been set up previously—not necessarily by them, but by anyone—in a centralized way, then it is cheaper for the customer to also set their manufacturing up in a centralized way. In other words, there is a hysteresis effect where previous choices influence current ones. I think of this as the historical explanation for the dominance of centralized manufacturing.
+          <br><br><br>
+          <span id="the" style="padding-top: 90px"><strong>The historical explanation</strong></span>
+          <br><br>
+          Let’s consider an example. It’s 1760 and you’re a barrel maker in Boston. Initially, your operation was simple: you and your apprentice made barrels in your workshop and sold them to local customers. The recent war effort against France, however, has quickly increased the demand for barrels (good for you!) and now the British army is requisitioning barrels for the front lines in Pennsylvania. You now have a choice—you can open up a satellite manufacturing facility in Pennsylvania, or you can ramp up production in Boston and then pay someone else to deliver the barrels to the British. Three factors make centralizing production preferable:
+          <ol>
+            <li>Easier logistics — you already have your Boston supply chain squared away, so you won’t have to go through the hassle of finding new materials suppliers in Pennsylvania</li>
+            <li>Economy of scale — if X square feet of factory space is required to house the necessary production equipment, it’s cheaper to rent a single larger facility in Boston than to rent a smaller facility in each location (the classic volume-area economy of scale)</li>
+            <li>Simpler distribution — arbitrage within the transportation industry has made it cheaper and easier for you to hire them to distribute your barrels than to do it yourself </li>
+          </ol>
+          The first two factors — easier logistics and economy of scale — are true regardless of what’s happened in the past. Anyone weighing the pros and cons of centralized vs. decentralized production will see them, at first glance, as arguments for the former. Simpler distribution, however, is not a fact of life but rather a historical artifact. The strength of the shipping industry is an effect of centralized production. If companies had opted initially for decentralized production, the would not have been a need to transport products long distances and therefore the shipping industry would look radically different today. Most likely, we would see many independent and local distribution networks, supported by a few long-distance transportation legs for raw materials. But because some company long ago decided they needed someone to transport their product far away, the global shipping industry emerged.
+          <br><br>
+          Here’s the conclusion of this argument: once the infrastructure for centralized manufacturing had been built, it made a lot of sense from an economic perspective to continue using it. The switching cost comes from the fact that centralized production and long-distance transportation networks support and encourage each other in a positive feedback cycle. Once you’re in it, it’s hard to break out of it.
+          <br><br>
+          I italicized “economic perspective,” however, because that’s not the only lens through which to view business decisions. In the olden days, meaning any time before 2010, the economic perspective was pretty much the only one that companies considered. But now, in 2021, businesses and individuals are starting to seriously consider the environment when making decisions. Given this change in attitude, now is the first time in history when the environmental benefits of decentralized manufacturing are beginning to outweigh the economic positives of the centralized model. In other words, the hysteresis effect is starting to break down, and the time for Momobo is now.
+          <br><br><br>
+          <span id="tte" style="padding-top: 90px"><strong>The technological explanation</strong></span>
+          <br><br>
+          In addition to the positive feedback cycle of history, the centralized manufacturing model has been bolstered by various technological constraints. Before I dive in, it will be helpful to remind ourselves of the thesis behind centralization:
+          <div class="quote">Manufacturing equipment is expensive compared to transportation, so companies can save money by consolidating production and leveraging global shipping networks to get products into the hands of consumers.</div>
+          Let’s break this down, starting with “manufacturing equipment is expensive.” What equipment specifically? And why is it so expensive? For plastic products, the primary production techniques are <a href="https://en.wikipedia.org/wiki/Injection_moulding">injection molding</a>, <a href="https://www.youtube.com/watch?v=pDXALxQicbI">blow molding</a>, and <a href="http://www.madehow.com/Volume-4/Drinking-Straw.html">extrusion</a>, all of which involve melting plastic pellets and forming them into a more useful geometry. There are three main reasons why the equipment to execute these processes is expensive: 1) the equipment is physically large, 2) it requires large buildings to house it, and 3) it requires workers to run it.
+          <br><br>
+          Upon first glance, it might seem that these three qualities of manufacturing equipment provide a compelling argument for centralized manufacturing. If equipment is really that expensive, you want to be buying as little of it as possible to satisfy demand, right? Well, that’s a big if. The key idea here is that the <strong>scale of your equipment</strong> must match the <strong>demand you face</strong>. The big, though,  misconception is about which one of these is the independant variable. The centralized model of production doesn’t come from choosing big expensive equipment, it comes from choosing global demand which in turn requires you to buy big expensive equipment. If, and only if, you decide that your factory will be producing products for the entire world, then you need expensive equipment to satisfy that demand. If instead you choose to produce products only for a single city, the cost of your equipment will be significantly cheaper.
+          <br><br>
+          Here’s where the “right time” half of “right place, right time” comes in: up until a few years ago, small-scale plastic production equipment hadn’t really been invented. A priori, there’s no real technological reason for this. It’s not like we didn’t have the necessary materials or processes to create small-scale plastic-production machines. The best explanation I can think of is simply that there was no demand for it. Centralization had won decisively, and no one was even thinking about injection molding or extrusion on the small scale. Then the maker movement came around and 3D printing started picking up steam, which led to increased interest in other forms of desktop manufacturing. Even today, there are very few desktop injection molders out there (the only two that I know of are <a href="https://www.injectionmolder.net">this</a> and <a href="https://www.micro-molder.com">this</a>), and no desktop blow molding or extrusion machines. These machines aren’t particularly complicated or difficult to make, they just haven’t been invented yet because the decentralized manufacturing market is only just beginning to emerge. So, from a technological standpoint, the time for Momobo is now.
+          <br><br><br>
+          <span id="ofc" style="padding-top: 90px"><strong>One final consideration: natural resources</strong></span>
+          <br><br>
+          In one sense, the entire concept of a global economy stems from the fact that natural resources are found only in certain places. This fact has influenced industrial decisions for millennia: cotton could only grow in the south, so northern textile mills necessarily had to rely on shipping networks for their supply; oil comes only from natural deposits, but is needed everywhere, so it necessitates shipping as well; metal has to be extracted from the mines and then shipped to the forgeries. Et cetera. Once the shipping industry emerged to transport natural resources, it became cheaper for everyone to specialize, which is the term I’ll use to describe an individual or company doing one thing, in one place, really well. In other words, the opposite of vertical integration.
+          <br><br>
+          Labor specialization has been responsible for periods of massive economic growth throughout history, so it is not without merits. But it is the very concept of specialization—which involves geographically dispersing operations dependant on proximity to natural resources and labor skill level—that has propped up the global shipping industry. Given the carbon footprint of this industry, it seems prudent to rely on it as little as possible, which is the whole idea behind Momobo. That said, since I’ve already acknowledged their special status of being found only in certain places, I’m willing to make a concession for the transportation of natural resources.
+          <br><br><br><br>
+        </normal>
+
+        <head1 id="ecatcfp">Environmental considerations and the case for plastic</head1><br><br>
+        <normal>
+          <br>
+          One simple method of reducing plastic waste is to discourage the use of plastic products. Many cities have done this with plastic bag bans and plastic straw bans, causing alternative products to emerge in their place. In certain areas, you’ll be shunned for entering a Whole Foods without a reusable bag, and many restaurants and coffee shops now exclusively carry paper straws. Quick comment: paper straws have an awful user experience. Paper straws, unsurprisingly, deform when they get wet…think about that for a second. In fact, I think a lot of paper substitutes are far worse than their plastic counterpart. I feel this way primarily because they don’t work as well but also because <em>they’re not actually that much better for the environment</em> when you consider the carbon footprint of their distribution networks. There are several arguments I could make for why we should continue making things out of plastic, but there are only two that really matter: 1) plastic is superior to alternative materials in many ways, and 2) plastic isn’t much worse for the environment than alternative materials.
+          <br><br><br>
+          <span id="pistb" style="padding-top: 90px"><strong>Plastic is simply the best</strong></span>
+          <br><br>
+          From an engineering perspective, plastic is a fantastic building material. For many objects, particularly those with complex forms—bowls, water bottles, utensils, containers, etc.—plastic is far easier and cheaper to work with than metal, wood, or ceramic. It’s material properties, namely it’s strength and ductility, make it ideal for cheap products that endure high amounts of wear and tear. Most importantly, in my opinion, plastic is pretty much the only material that lends itself to mass manufacturing. Pictured below are the six materials out of which almost everything is made:
+          <br><br>
+          <img src="momobo/materials.png" width=100%>
+          <br><br>
+          Why is plastic unique in its ability to be mass produced? It really comes down to its thermal properties. Injection molding, blow molding, and extrusion are basically the only processes that have the potential for a scale economy, in which <em>per unit price</em> goes down as production quanities go up. [1, 2] All of these processes have three requirements: 1) the material to be molded is liquid at some temperature, 2) the material of the mold is solid at that same temperature, and 3) it’s easy to remove the molded piece from the mold afterwards. It may not seem like it, but these requirements rule out <strong>a lot</strong> of potential material combinations.
+          <br><br>
+          Most plastics melt between 400 ºF and 600 ºF while most metals don’t even deform at those temperatures, which makes it particularly convenient to use metal molds to hold and form molten plastic. The only material that can withstand the temperatures at which metal melts is sand, which is the material used to make molds for engine blocks. Sand molds are complicated to make and fall apart after a single use, however, whereas steel molds for plastic injection molding machines can last for millions of units. Wood…well, wood doesn’t ever turn into a liquid, it just burns. Stone is moldable at large scales (think concrete building construction) but that process is neither quick nor cheap, and the material properties of concrete make it unappealing for human-scale, household items. Technically, ceramic and glass can be molded, but extracting them from the mold aftwards is quite difficult and expensive, so neither material lends itself to a scale economy.
+          <br><br>
+          The mass manufacturability of plastic means that, viewed through the lens of the consumer, certain plastic products are superior to their metal or wood counterparts because they are far cheaper. Plastic is certainly not the best material for all products, but it is for items that have short lifespans such as takeout containers, straws, and to-go utensils. No one wants a future in which takeout containers cost $5 each. Many cities even retracted their plastic straw bans after people complained about the inferiority of paper straws. Bottom line: plastic is great. Ideally, we wouldn’t have to feel bad about using it, but unfortunately climate change is a very real threat, so we have to seriously consider the environmental ramifications of our plastic usage.
+          <br><br><br>
+          <span id="iprtbfte" style="padding-top: 90px"><strong>Is plastic really that bad for the environment?</strong></span>
+          <br><br>
+          Yes, but not for the reasons one might think. Plastic gets a bad rap in popular culture primarily because of its propensity to kill turtles in the ocean. Its turtle-killing reputation is due to two facts about plastic, one inherent (i.e. it’s the fault of plastic) and one existential (i.e. it’s not the fault of plastic). Inherently, plastic is not very biodegradable, meaning that if thrown on the forest floor it will remain there for hundreds of thousands of years before turning into a useful natural resource. Also, plastic floats, meaning it tends to be more visible than other types of material waste that ends up in the ocean. These material properties are difficult to alter, so we won’t worry too much about them here.
+          <br><br>
+          The bigger reason that plastic kills turtles however is that we, as a planet, use so much of it. Plastic ends up in oceans and forests and on the side of the road because almost every short-term-use product is made out of plastic. If everything made out of plastic was instead made out of wood, we’d be saying that wood kills turtles. This is good news for plastic because it means the problem is with us, not it.
+          <br><br>
+          Conversely, this is bad news for the future of the planet because, again, we as a species are what’s bad for the environment. We choose to throw plastic into the ocean. We choose to drill in the arctic for oil so that we can make new plastic. We choose, and this is the kicker, to transport plastic all over the globe on container ships, semi-trucks, and planes which emit massive amounts of carbon byproducts. The data is difficult to find on this, but I’m willing to bet that transportation and distribution accounts for the majority of plastic’s carbon footprint. In the big picture, it doesn’t matter whether a product is made out of paper or plastic: if it’s transported across the globe in any meaningful way, it’s carbon footprint is the same.
+          <br><br>
+          As bad as this analysis sounds for the fate of the world, it actually gives us ethical carte blanche to continue using plastic for straws and takeout containers. So not only is plastic a fantastic building material, but we don’t even have to feel bad about using it!
+          <br><br><br>
+          <span id="ipitp" style="padding-top: 90px"><strong>If plastic isn't the problem, then what is?</strong></span>
+          <br><br>
+          While we don’t have to feel bad about the fact that we’re using plastic, we should certainly feel bad about the way we’re using it. Let’s consider all the ways in which plastic has the potential to harm the environment:
+          <ol>
+            <li>Plastic production emits carbon byproducts</li>
+            <li>The transportation of plastic products emits carbon byproducts</li>
+            <li>When not properly disposed of, plastic garbage disrupts wildlife habitats and kills animals</li>
+          </ol>
+          The centralized process used by plastic manufacturers—wherein products are made at a single facility and then transported around the globe for distribution—maximizes the distance each product travels before end-use and makes recycling efforts difficult, thereby encouraging plastic to be improperly discarded and incentivizing the production of new plastics. In other words, plastic isn’t the problem. The problem is that we’re using a centralized process to make plastic goods.
+          <br><br>
+          In light of this conclusion, the solution is clear: we need to produce plastic in a way that minimizes it’s potential to cause environmental damage. We need to:
+          <ol>
+            <li>Produce less new plastic</li>
+            <li>Not transport plastic products as far</li>
+            <li>Ensure plastic products actually get recycled</li>
+          </ol>
+          If we can do these three things, we don’t have to feel bad about continuing to use plastic to make takeout containers and straws. In reality, items 1 and 3 on the above list are highly correlated because more recycled plastic means lower demand for new plastic, so we really only have to do two things!
+          <br><br><br><br>
+          [1] The potential for a scale economy comes from the fact that these processes are easily automated, which eliminates a major variable cost: workers who need to be paid an hourly wage. The only other variable costs are that of raw materials and that of operational overhead—machine wear and tear, supervisory staff, etc—but these are several orders of magnitude less than the cost of labor.
+          <br><br>
+          [2] Certain metal processes—casting and forging, namely—also possess scale advantages, but those techniques are expensive and dangerous compared to plastic processes so you want to avoid them if possible.
+          <br><br><br><br>
+        </normal>
+
+        <head1 id="qnodp">Quick notes on decentralized production (Momobo)</head1><br><br>
+        <normal>
+          <br>
+          <span id="milptd" style="padding-top: 90px"><strong>Momobo is less prone to disruption</strong></span>
+          <br>
+          <ul>
+            <li>
+              Because centralized production facilities necessarily see global demand, they have a very hard time adapting to local variations in demand
+              <ul>
+                <li>This leads to periods of surplus and shortage</li>
+              </ul>
+            </li>
+            <li>Decentralized manfucturing, on the other hand, can quickly ramp production up or down depending on local demand</li>
+          </ul>
+          <br>
+          <span id="mdwfap" style="padding-top: 90px"><strong>Momobo doesn’t work for all products, but it does for disposable ones</strong></span>
+          <br>
+          <ul>
+            <li>A decentralized model for iPhone production or Gatorade production wouldn’t make much sense, given the complexity of those manufacturing processes and the relatively geographically sparse demand for them</li>
+            <li>Takeout containers, plastic utensils, and straws however have incredibly simple manufacturing processes and the demand for them is geographically dense</li>
+          </ul>
+          <br>
+          <span id="mcscm" style="padding-top: 90px"><strong>Momobo could save consumers money</strong></span>
+          <br>
+          <ul>
+            <li>
+              With the current model, the supply chain probably looks like:
+              <ul>
+                <li>Factory → [long-distance shipping] → warehouse → [short-distance shipping] → restaurant</li>
+              </ul>
+            </li>
+            <li>We aim to replace the factory, long distance shipping, and warehouse segments with a single Momobo</li>
+            <li>Each Momobo will process recycling in addition to doing manufacturing</li>
+          </ul>
+          <br>
+          <span id="mclj" style="padding-top: 90px"><strong>Momobo creates local jobs</strong></span>
+          <br>
+          <ul>
+            <li>The centalized model of production ensures that most of the people involved in the creation and distribution of the products you use live very far away from you</li>
+            <li>Decentralized production, however, requires that the people who make and deliver your products live locally</li>
+          </ul>
+          <br><br>
+        </normal>
+
+        <head1 id="c">Conclusion: how this might actually be set up</head1><br><br>
+        <normal>
+          <br>
+          So far, I’ve spent all my time talking about how Momobo will work once it’s set up, but I recognize that it’s a tall order to get something like this going. I’d like to wrap things up by sketching out a blueprint for how to get Momobo off the ground.
+          <ul>
+            <li>The operational structure
+              <ul>
+                <li>Momobo will be a non-profit, and Momobo facilities will be run as franchises
+                  <ul>
+                    <li>The central organization will exist simply to:
+                      <ul>
+                        <li>Provide franchise owners with the help and guidance they need to become self-sustaining</li>
+                        <li>Promote and encourage the creation of Momobo facilites across the world</li>
+                        <li>Maintain and develop the Momobo manufacturing philosophy</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Franchises will be municipally supported but privately owned
+                  <ul>
+                    <li>The success of any individual franchise will depend on the support of the local public and the support of the local city government
+                      <ul>
+                        <li>The local public must be environmentally conscious and be willing to pay a small premium in exchange for a reduced carbon footprint</li>
+                        <li>The city government must encourage the use of Momobo products over those produced far away
+                          <ul>
+                            <li>Ideally, franchises would target municipal contracts wherein schools, libraries, government buildings, etc. would all use Momobo-produced plastic products</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Politicians will be incentivized to support a Momobo franchise because it will:
+                      <ul>
+                        <li>Create local jobs</li>
+                        <li>Lower their town’s carbon footprint (potential federal tax credits)</li>
+                        <li>Make their town more self-sufficient</li>
+                        <li>Lower the recycling demand on their waste management division</li>
+                      </ul>
+                    </li>
+                    <li>Local citizens will be incentivized to own and run a Momobo franchise because it will:
+                      <ul>
+                        <li>Generate profits and good press</li>
+                        <li>Improve their public image (so long as being environmentally conscious is positive)</li>
+                        <li>Help the world’s long term future by lowering their town’s carbon footprint</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Timeline
+              <ul>
+                <li>Buy small-scale injection molding and extrusion equipment</li>
+                <li>Start producing plastic utensils, takeout containers, and straws</li>
+                <li>Pursue a supply contract with the city government based on the merits of the products and the environmental benefits of Momobo</li>
+                <li>Pursue contracts with local restaurants</li>
+                <li>Demonstrate self-sufficiency and profitability</li>
+                <li>Reinvest profits into expansion efforts</li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+        </normal>
+
+      </div>
+    </div>
+  </body>
+</html>

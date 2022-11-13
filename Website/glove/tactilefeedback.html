@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      Red {
+        color: red;
+      }
+      html {
+        background: url(glove.png) repeat center fixed;
+        background-size: 334px 217px;
+      }
+      center {
+        margin-top: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 500%;
+        background-color: blue;
+      }
+      center:hover {
+        /* transform: rotate(-180deg); */
+        color: darkred;
+      }
+
+      b {
+        font-family: "Helvetica";
+      }
+      b:hover {
+        color: yellow;
+      }
+
+      back {
+        float: left;
+        margin-left: 30px;
+        font-size: 300%;
+        padding: 20px;
+        text-decoration: underline;
+        color: black;
+        background-color: white;
+      }
+      back:hover {
+        transform: rotate(350deg);
+      }
+      .text {
+        text-align: left;
+        padding: 40px;
+        height: 90%;
+        width: 70%;
+        margin-left: 15%;
+        font-family: "Helvetica";
+        font-size: 140%;
+        margin-right: 100px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        background-color: white;
+      }
+      i {
+        padding: 40px;
+        width: 528px;
+        height: 244px;
+        margin-left: 10%;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      figure {
+          /* display: block; */
+          width: 50%;
+          border: none;
+          margin: 20px;
+          text-align: center;
+          font-size: 100%;
+          font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="welcome">
+    <center>tactile feedback</center>
+    <a href="./howitworks.html"><back> &larr; Back </back></a>
+
+    <div class="text">
+      <em>12 November 2020</em>
+      <br><br>
+      The tactile module comprises two complimentary subsystems: <a href=#vibration>vibration feedback</a> and <a href=#skin>skin-stretch feedback</a>.
+
+      <img src="tacmoddiagram.png" alt="Simplified software stack" width="50%" height="auto" class="center" style="margin-top:20px; margin-bottom:20px">
+
+      In developing the tactile feedback module, we encountered competing constraints: the module should be as small and lightweight as possible, so as not to restrict or encumber finger movement; it should also, however, contain as many degrees of freedom as possible, so as to maximize the space of reproducible tactile sensations. It was natural that we find these two features at odds &mdash; most haptics engineers do. Luckily, many in academia have interested themselves in developing devices that artificially provoke tactile sensations, so we were able to draw from a vast and deep body of literature when designing our own device. After much consideration, we deduced that a vibration motor acting in conjunction with a 2-DOF skin-stretch manipulator would be capable of recreating a wide array of tactile experiences while still fitting in a sufficiently convenient form factor.
+      <br><br>
+
+      <div id="skin">
+        <h2>Skin Stretch Feedback</h2>
+        Our skin-stretch unit has two degrees of freedom. It can press into the fingerpad, simulating a contact force, and it can shear the fingerpad, simulating tangential forces. Shown below is a simplified model for the skin-stretch element of our tactile feedback module.
+        <figure class="center" style="margin-top: 40px;">
+          <img src="skinstretch1.png" width="100%" height="auto" alt="Simplified model of our device">
+          <!-- <figcaption><em>A simplified model for the skin-stretch element of our tactile feedback module.</em></figcaption> -->
+        </figure>
+
+        While our device takes cues from <a href="gravitygrabber.pdf">this paper</a>, both our mechanical design and embedded control software have undergone significant evolution such that they cannot be revealed here, for intellectual property reasons. Nevertheless, we can still discuss the fundamental operating principal. One of the primary findings of the referenced paper, which it shares with a number of other papers, is that our sensation of <em>skin stretch</em> is essential to our perception of holding physical objects. Specifically, the deformation of the fingertips is primarily what gives rise to our perception of weight. Consider the case of a hand holding a glass of water. As the glass fills up and its weight increases, the pads of the fingertips in contact with the glass begin to deform downwards. By providing an artificial shearing stress to a person's fingertip pads, they will perceive a physical weight. This experience is enhanced if the rest of their senses are similarly fooled (e.g. if, via a VR headset, they see a weight in their hand).
+
+        <figure class="center" style="margin-top: 40px;">
+          <img src="skinstretch3.png" width="100%" height="auto" alt="Hand holding glass of water">
+          <!-- <figcaption>Board layout for the MDC, version 001.</figcaption> -->
+        </figure>
+
+        The optimal skin stretch manipulator would have a complete six DOFs to account for every possible grasping posture. However, we've determined that most of the benefit of such a system can be achieved with only two DOFs, and thus adding more than that would introduce unnecessary complexity (cost), weight, and size to the device.
+        <br><br>
+
+      <div id="vibration">
+        <h2>Vibration Feedback</h2>
+        Implementing vibration feedback is incredibly simple from a mechanical standpoint. In fact, I even feel comfortable revealing the secret behind our method of providing vibration feedback: we take a vibration motor, and &mdash; wait for it &mdash; put it in contact with the user's fingertip. The real complexity in implementations of vibration feedback come from the control system, which is tasked with faithfully replicating the vibrotactile profiles of physical materials. Consider the materials shown below.
+
+        <figure class="center" style="margin-top: 20px; margin-bottom: 20px;">
+          <img src="materials.png" width="100%" height="auto" alt="Various materials with different textures">
+          <!-- <figcaption>Board layout for the MDC, version 001.</figcaption> -->
+        </figure>
+
+        You can probably imagine the sensation of touching each of these materials. What makes these sensations unique? According to <a href="texturepad.pdf">this awesome paper</a>, "each surface has unique microscopic details that induce distinctive vibrations." To make matters more complicated, these vibration profiles depend not only on the textures themselves, but also on the <strong>normal force</strong> and <strong>scanning speed</strong> between the finger and the surface. The aforementioned paper does a bunch of really cool things, including: building a device to record the 3D vibration profiles of different materials; reducing those profiles to "perceptually equivalent" one-dimensional signals; using linear predictive coding to compress the profiles into a "database of fequency-domain texture models"; and rendering those models in real time with a finger-mounted vibration motor.
+        <br><br>
+        Our long term goal is to follow in their footsteps and produce a database of texture models that can be accessed by anyone programming an application for our glove. All a programmer would have to do is define the material of a given object, and the tactile feedback module would automatically replicate its vibration profile. The whole predictive linear coding step might be unnecessary for us, but the idea of representing materials by their frequency domain spectrum is a compelling idea, and one that we believe will underpin the implementation of realistic haptics in the future.
+
+
+
+  </body>
+</html>

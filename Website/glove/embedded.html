@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      Red {
+        color: red;
+      }
+      html {
+        background: url(glove.png) repeat center fixed;
+        background-size: 334px 217px;
+      }
+      center {
+        margin-top: 50px;
+        text-align: center;
+        color: blue;
+        font-size: 500%;
+        background-color: orange;
+      }
+      center:hover {
+        /* transform: rotate(-180deg); */
+        color: white;
+      }
+
+      b {
+        font-family: "Helvetica";
+      }
+      b:hover {
+        color: yellow;
+      }
+
+      back {
+        float: left;
+        margin-left: 30px;
+        font-size: 300%;
+        padding: 20px;
+        text-decoration: underline;
+        color: black;
+        background-color: white;
+      }
+      back:hover {
+        transform: rotate(350deg);
+      }
+      .text {
+        text-align: left;
+        padding: 40px;
+        height: 100%;
+        width: 70%;
+        margin-left: 15%;
+        font-family: "Helvetica";
+        font-size: 140%;
+        margin-right: 100px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        padding-bottom: 100px;
+        background-color: white;
+      }
+      i {
+        padding: 40px;
+        width: 528px;
+        height: 244px;
+        margin-left: 10%;
+      }
+      .textwrapright {
+        float: right;
+        margin: 10px;
+      }
+      .textwrapleft {
+        float: left;
+        margin: 10px;
+      }
+      figure {
+          width: 25%;
+          border: none;
+          margin: 20px;
+          text-align: center;
+          font-size: 60%;
+      }
+      /* figure img {
+          vertical-align: top;
+      }
+      figure figcaption {
+          border: 1px dotted blue;
+          text-align: center;
+      } */
+    </style>
+  </head>
+
+  <body>
+
+  <div id="welcome">
+    <center>embedded electronics</center>
+    <a href="./howitworks.html"><back> &larr; Back </back></a>
+
+    <div class="text">
+      <em>11 November 2020</em>
+      <br><br>
+      We've organized the embedded electronics according to the logical topology shown below.
+      <br><br>
+      <img src="embeddedoverview.png" alt="Simplified software stack" width="1091" height="600">
+      <br><br>
+
+      <div id="PM">
+        <figure style="float:right">
+          <img src="pm001.png" width="100%" height="auto" alt="Power management board version 001">
+          <figcaption>A populated PM board, version 001.</figcaption>
+        </figure>
+        <h3>Power Management</h3>
+        This module has two functions: 1) receive power from the wall and use it to charge the on-board battery, and 2) buck / boost the battery voltage to the various voltage levels required by the other modules. Additionally, this module is responsible for monitoring the temperature of the battery, the current discharge through the system, and the battery voltage, all of which helps to prevent catastrophic brown-outs and meltdowns. All of these things are really monitored by the microcontroller though, since the PM board isn't capable of digital processing on its own.
+      <br><br><br><br>
+
+      <div id="BB">
+        <h3>Brain Board</h3>
+        <figure style="float:left">
+          <img src="bb001.png"  width="100%" height="auto" alt="Brain board version 001">
+          <figcaption>Schematic for one of the microcontrollers on the brain board.</figcaption>
+        </figure>
+        This is the heart &mdash; or rather, the <em>brain</em> &mdash; of the TeleX glove. It's responsible for communicating with the host computer / VR headset over BLE, and for running the entire embedded control stack. It comprises a couple of microcontrollers and their supporting infrastructure, which includes some external oscillators, an over-voltage protection circuit, a JTAG programming interface, and an RF antenna circuit. The primary microcontroller runs an RTOS, which serves to manage the memory and power consumption of all the connected modules. The tactile module and the force feedback module (MDC) are entirely independant and are capable of entering a low-power mode, meaning they can be independantly shut off at the user's discretion to prolong battery life.
+      <br><br><br><br>
+
+      <div id="TACMOD">
+        <figure style="float:right">
+          <img src="tacmod001.png" width="100%" height="auto" alt="Tactile module driver version 001">
+          <figcaption>A populated TAC-MOD board, version 001. See if you can spot the mistake!</figcaption>
+        </figure>
+        <h3>Tactile Module Driver</h3>
+        This module is responsible for driving the tactile feedback unit, which mounts on the user's finger to provide tactile stimulus in two forms: skin-stretch and vibration. For more information on how the tactile module works from a mechanical standpoint, check out <a href="tactilefeedback.html">its designated page</a> under the "How it works" section of this website. The 20-QFN IC on the board is an A3906 which drives the two DC motors that provide skin-stretch feedback. The 10-VSSOP IC is a DRV2605L which drives a linear resonant actuator mounted on the underside of the tactile module. All the LEDs on the board are just for fun, and probably won't make their way to the final embedded board.
+      <br><br><br><br>
+
+      <div id="SDA">
+        <h3>Sensor Data Acquisition</h3>
+        No picture associated with this one...yet. This circuit is responsible for reading all of the sensors on the glove and forwarding that data to the brain board in a convenient format. There are two main categories of sensors that are used in the glove: those that measure joint angle values, and thus serve the hand-tracking functionality of the glove; and those that serve to close the control loops on the various motors employed in the force- and tactile-feedback modules.
+      <br><br><br><br>
+
+      <div id="MD">
+        <figure style="float:left; margin-top: 0px;">
+          <img src="md002.png"  width="100%" height="auto" alt="Motor driver board version 001">
+          <figcaption>A populated motor driver board, version 002.</figcaption>
+        </figure>
+        <h3>Motor Driver</h3>
+
+        As far as embedded modules go, this one is about as low-level as it gets. Used to drive DC motors, this board lives one step removed from the mechanics of the glove. It is capable of converting digital signals into appropriate drive voltages for up to two brushed motors and for monitoring the current drawn by each motor. Additionally, it has a low-power mode which enables the glove to save power any time the motors aren't actively being driven. The heart of this module is an A3906 IC, the 20-QFN chip shown in the picture to the left.
+      <br><br><br><br>
+
+      <div id="MDC">
+        <h3>Tactile Module Driver</h3>
+        <figure style="float:right; margin-top: 0px;">
+          <img src="mdc001.png" width="100%" height="auto" alt="Motor driver controller version 001">
+          <figcaption>Board layout for the MDC, version 001.</figcaption>
+        </figure>
+        This board sits between the brain board and all the motor drivers. If we had fewer motor drivers, the brain board could communicate with them directly. Unfortunately, that is not the case, and we need a whole circuit devoted to being a glorified multiplexer &mdash; a mid-level manager, for all you non-tech people out there &mdash; managing communication between the motor drivers and their boss. Well, it also has some nice power management features, so perhaps this board deserves more credit than I'm currently giving it.
+      <br><br><br><br>
+
+      <div id="VS">
+        <h3>Vision System</h3>
+        This module stands almost entirely independant from the rest of the embedded system. Aside from using the brain board as a pass-through data transfer system with the host, it contains its own microprocessor, driver chips, and power management circuitry. This is one of the few modules on the glove that contains some "secret sauce," meaning we unfortunately can't give out much information about it.
+      <br><br><br><br>
+
+
+  </body>
+</html>

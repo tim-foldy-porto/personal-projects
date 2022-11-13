@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX Glove</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      Red {
+        color: red;
+      }
+      html {
+        background: url(glove.png) repeat center fixed;
+        background-size: 334px 217px;
+      }
+      center {
+        margin-top: 50px;
+        text-align: center;
+        color: black;
+        font-size: 500%;
+        background-color: yellow;
+      }
+      center:hover {
+        /* transform: rotate(-180deg); */
+        color: lightgreen;
+      }
+
+      b {
+        font-family: "Helvetica";
+      }
+      b:hover {
+        color: yellow;
+      }
+
+      back {
+        float: left;
+        margin-left: 30px;
+        font-size: 300%;
+        padding: 20px;
+        text-decoration: underline;
+        color: black;
+        background-color: white;
+      }
+      back:hover {
+        transform: rotate(350deg);
+      }
+      .text {
+        text-align: left;
+        padding: 40px;
+        height: 90%;
+        width: 70%;
+        margin-left: 15%;
+        font-family: "Helvetica";
+        font-size: 140%;
+        margin-right: 100px;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        background-color: white;
+      }
+      i {
+        padding: 40px;
+        width: 528px;
+        height: 244px;
+        margin-left: 10%;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      figure {
+          /* display: block; */
+          width: 60%;
+          border: none;
+          margin: 30px;
+          text-align: center;
+          font-size: 70%;
+          font-family: serif;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <div id="welcome">
+    <center>force feedback</center>
+    <a href="./howitworks.html"><back> &larr; Back </back></a>
+
+    <div class="text">
+      <em>12 November 2020</em>
+      <br><br>
+      The fundamental idea behind force feedback is represented in the image below.
+      <figure class="center" style="margin-top: 40px;">
+        <img src="cubegrab.png" width="60%" height="auto" alt="Hand grabbing a cube">
+        <figcaption>A typical scenario in virtual reality: the user grabs a virtual cube and expects to feel a reaction force F_k and a stiffness k.</figcaption>
+      </figure>
+      <!-- <img src="cubegrab.png" alt="Hand grabbing a cube" width="10px"  class="center" style="margin-top:20px; margin-bottom:20px"> -->
+
+      If the goal of a haptic glove is to trick users into thinking they're grabbing a physical object, a pretty important part of that is restricting their fingers from passing through the surface of that object. In the picture above, the hand is grabbing a virtual cube. The person to which that hand belongs might reasonably expect to feel three things: a normal force exerted on their fingers by the cube, a certain stiffness from the cube (aka how springy is the cube), and some tactile sensation dependant on the material of the cube. Artificially replicating this third phenomenon is important enough that it warrants its own discussion on our <a href="tactilefeedback.html">tactile feedback page</a>.
+      <br><br>
+      The role of the force feedback system in the TeleX glove is to produce torques on the main joints of the user's hand, which, in effect, replicate a given normal force and stiffness. The exact normal force that the glove attempts to replicate is determined by the software, which is discussed on our <a href="tactilefeedback.html">software page</a>. The first version of the glove will only be able to produce outward-directed, infinitely rigid normal forces. In layman's terms, this means that the glove can only restrict the user's fingers from moving inward, and that it can only simulate hard surfaces. Luckily, this accounts for a majority of grasping scenarios. In the rare case where a user expects a normal force on the tops of their fingers, they can just use their imagination.
+      <br><br>
+      The lack of variable stiffness in our force feedback mechanism is more bothersome. To fully convince virtual-reality goers that they're in the real world, it would be nice if we could simulate soft things as well as rigid things. I mean, I personally wouldn't want to live in a world without pillows. Variable stiffness mechanisms are of immense interest to us and are an area of research we are actively pursuing, but such a mechanism will not find its way into the first version of our glove. In successive versions however, we fully intend to incorporate a variable stiffness actuator in order to produce a wider variety of force sensations.
+      <br><br>
+      Unfortunately, since the mechanical construction comprises most of what's actually patentable about our glove, we can't reveal the innerworkings of our force feedback technology just yet. To this effect, we've had to censor the coolest looking parts of our glove in the tesselated picture that forms the background of this page. Trust me, we're as bummed about that as you are. On the other hand, though, colorful rectangles!
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>TeleX PCB</title>
+    <style>
+      .output {
+        border-style: none;
+        font-family: inherit;
+        font-size: inherit;
+        width: 80px;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      body{
+        background-color: lightgreen;
+      }
+      .col-25 {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        text-align: left;
+      }
+      .col-75 {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+      .col1 {
+        float: left;
+        width: 20%;
+        margin-top: 8px;
+        margin-left: 24px;
+        margin-bottom: 6px;
+      }
+      .col2 {
+        float: left;
+        width: 20%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+      .col3 {
+        float: left;
+        width: 25%;
+        margin-top: 7px;
+        margin-bottom: 6px;
+      }
+      .col4 {
+        float: left;
+        width: 20%;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+      label {
+        padding-left: 20px;
+        padding-right: 12px;
+        display: inline-block;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .container {
+        padding-left: 20px;
+      }
+      .subheading {
+        font-family: monospace;
+        font-size: 150%;
+        font-weight: 1000;
+        padding-bottom: 6px;
+      }
+      .subsubheading {
+        font-family: monospace;
+        font-size: 135%;
+        font-weight: 700;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        margin-left: 18px;
+      }
+      .smolcontainer {
+        border-radius: 5px;
+        border-style: solid;
+        border-width: thin;
+        background-color: white;
+        padding: 20px;
+      }
+      .submitbutton {
+        float: left;
+        text-align: center;
+        width: 90%;
+        padding-top: 12px;
+        padding-bottom: 5px;
+      }
+      .left{
+        overflow: auto; /* This will add a scroll when required */
+        width: 30%;
+        float:left;
+        height: 100%;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: thin;
+        background-color: white;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 1%;
+      }
+      .middle{
+        overflow: auto; /* This will add a scroll when required */
+        width: 40%;
+        float:left;
+        height: 100%;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: thin;
+        background-color: white;
+        padding: 10px;
+        margin: 1%;
+      }
+      .right{
+        overflow: auto; /* This will add a scroll when required */
+        width: 19%;
+        float:left;
+        height: 100%;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: thin;
+        background-color: white;
+        padding: 10px;
+        margin: 1%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+  <h1 style="padding-left: 40px; padding-top: 10px;">TeleX PCB</h1>
+  <h2 style="padding-left: 40px">Low-Volume PCB Fabrication & Assembly</h2>
+
+<div class="container">
+  <form id="fishWeight" action="" >
+    <div class="left">
+      <div class="subheading" style="color: darkorange;">
+        Basic Info
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Number of boards:</label>
+        </div>
+        <div class="col-75">
+          <input id="n" name="n" type="number" min="1" max="30" step="1" value="3" style="width: 40px"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>The PCB is:</label>
+        </div>
+        <div class="col-75">
+          <input id="tlayers" name="layers" type="radio" checked="checked" /> 2 layers
+          <input id="flayers" name="layers" type="radio" /> 4 layers
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>The PCB has components on:</label>
+        </div>
+        <div class="col-75">
+          <input id="oside" name="sides" type="radio" checked="checked" /> one side
+          <input id="tsides" name="sides" type="radio" /> both sides
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Top side needs stencil:</label>
+        </div>
+        <div class="col-75">
+          <input id="tystencil" name="tstencil" type="radio" checked="checked" /> yes
+          <input id="tnstencil" name="tstencil" type="radio"  /> no
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Bottom side needs stencil:</label>
+        </div>
+        <div class="col-75">
+          <input id="bystencil" name="bstencil" type="radio" /> yes
+          <input id="bnstencil" name="bstencil" type="radio" checked="checked" /> no
+        </div>
+      </div>
+
+      <div class="subheading" style="color: green; padding-top: 25px;">
+        Board Specifications
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Board height (in):</label>
+        </div>
+        <div class="col-75">
+          <input id="height" name="height" type="number" step="0.01" value="1"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Board width (in):</label>
+        </div>
+        <div class="col-75">
+          <input id="width" name="width" type="number" step="0.01" value="1"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Number of SMT components:</label>
+        </div>
+        <div class="col-75">
+          <input id="SMT" name="SMT" type="number" step="1" value="10"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Number of through-hole components:</label>
+        </div>
+        <div class="col-75">
+          <input id="TH" name="TH" type="number" step="1"  value="5"/>
+        </div>
+      </div>
+
+      <div class="subheading" style="color: blue; padding-top: 25px;">
+        Lead Time & Parts Sourcing
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Assembly speed (business days):</label>
+        </div>
+        <div class="col-75">
+          <input id="nspeed" name="speed" type="radio" checked="checked" /> 4 days
+          <input id="fspeed" name="speed" type="radio" /> 2 days
+          <input id="espeed" name="speed" type="radio" /> same day
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Shipping speed (business days):</label>
+        </div>
+        <div class="col-75">
+          <input id="nship" name="ship" type="radio" checked="checked" /> 5 days
+          <input id="fship" name="ship" type="radio" /> 3 days
+          <input id="eship" name="ship" type="radio" /> 2 days
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Components will be ordered by:</label>
+        </div>
+        <div class="col-75">
+          <input id="bytelex" name="parts" type="radio" /> TeleX PCB
+          <input id="byclient" name="parts" type="radio" checked="checked" /> Customer
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>(If parts are ordered by TeleX) Total BOM cost: $</label>
+        </div>
+        <div class="col-75">
+          <input id="BOM" name="BOM" type="number" step="0.01" value="0"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="submitbutton">
+      		<input type="submit" value="Calculate cost" style="font-size: 20px; background-color: lightyellow; padding: 5px;" />
+      		<input type="reset" value="Reset" style="font-size: 20px; background-color: lightpink; padding: 5px;" />
+      	</div>
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="row">
+        <div style="float: left; width: 20%; margin: 12px; font-family: Helvetica; font-size: 25px; color: red;">
+          Total Price:
+        </div>
+        <div style="float: left; width: 50%; margin: 10px; font-family: Helvetica; font-size: 25px; color: black;">
+          $ <input id="totalcost" type="number" step="0.01" class="output"/>
+        </div>
+      </div>
+      <div class="subheading" style="color: black; padding-top: 25px; margin-left: 12px;">
+        Detailed Price Breakdown
+      </div>
+      <div class="row">
+        <div class="col1">
+          Price per board:
+        </div>
+        <div class="col2">
+          $ <input id="totalcostper" type="number" step="0.01" class="output" />
+        </div>
+      </div>
+
+      <div class="subsubheading" style="color: brown;">
+        Fixed costs:
+      </div>
+      <div class="row">
+        <div class="col1">
+          Stencil cost:
+        </div>
+        <div class="col2">
+          $ <input id="stencilcost" type="number" step="0.01" class="output" />
+        </div>
+        <div class="col3">
+          Stencil cost per board:
+        </div>
+        <div class="col4">
+          $ <input id="stencilcostper" type="number" step="0.01" class="output" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col1" style="width: 40%">
+          Components shipping & handling:
+        </div>
+        <div class="col2" style="width: 40%">
+          $ <input id="cshipcost" type="number" step="0.01" class="output" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col1" style="width: 40%">
+          TeleX PCB shipping & handling:
+        </div>
+        <div class="col2" style="width: 40%">
+          $ <input id="shipcost" type="number" step="0.01" class="output" />
+        </div>
+      </div>
+
+      <div class="subsubheading" style="color: purple;">
+        Costs proportional to # of boards:
+      </div>
+        <div class="row">
+          <div class="col1">
+      		  PCB cost:
+          </div>
+          <div class="col2">
+            $ <input id="pcbcost" type="number" step="0.01" class="output" />
+          </div>
+          <div class="col3">
+            PCB cost per board:
+          </div>
+          <div class="col4">
+            $ <input id="pcbcostper" type="number" step="0.01" class="output" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            Solder cost:
+          </div>
+          <div class="col2">
+            $ <input id="soldercost" type="number" step="0.01" class="output" />
+          </div>
+          <div class="col3">
+            Solder cost per board:
+          </div>
+          <div class="col4">
+            $ <input id="soldercostper" type="number" step="0.01" class="output" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            Assembly cost:
+          </div>
+          <div class="col2">
+            $ <input id="assemblycost" type="number" step="0.01" class="output" />
+          </div>
+          <div class="col3">
+            Assembly cost per board:
+          </div>
+          <div class="col4">
+            $ <input id="assemblycostper" type="number" step="0.01" class="output" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            Reflow cost:
+          </div>
+          <div class="col2">
+            $ <input id="reflowcost" type="number" step="0.01" class="output" />
+          </div>
+          <div class="col3">
+            Reflow cost per board:
+          </div>
+          <div class="col4">
+            $ <input id="reflowcostper" type="number" step="0.01" class="output" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            Components cost:
+          </div>
+          <div class="col2">
+            $ <input id="componentcost" type="number" step="0.01" class="output" />
+          </div>
+          <div class="col3">
+            Components cost per board:
+          </div>
+          <div class="col4">
+            $ <input id="componentcostper" type="number" step="0.01" class="output" />
+          </div>
+        </div>
+
+    </div>
+
+    <div class="right">
+      <div class="subheading" style="color: red; font-size: 30px; text-align: center">
+        Place an Order
+      </div>
+      <div style="font-size: 18px; margin: 10px; font-family: Helvetica">
+        To place an order, <a href="mailto:telex.robotics@gmail.com">send us an email</a> containing:
+        <ul>
+          <li style="padding-bottom: 6px">Eagle (.brd, .sch) or gerber files for your board</li>
+          <li style="padding-bottom: 6px">Desired assembly speed</li>
+          <li style="padding-bottom: 6px">Desired shipping speed</li>
+          <li style="padding-bottom: 6px">If the BOM will be sourced by you or by TeleX PCB</li>
+          <li style="padding-bottom: 0px">The BOM for your board (excel or pdf)</li>
+        </ul>
+
+        We use the calculator on this page to determine pricing. If you've entered your board information correctly, the amount we charge you will match the amount calculated here.
+        <br><br>
+        Once we receive your request, we'll look over your board and get back to you the same day with lead time and a payment link.
+      </div>
+    </div>
+
+    <div style="float: left;margin-left: 1%">
+      <strong style="font-size: 18px">Restrictions:</strong>
+      <ul>
+        <li>Smallest package size we can do is <strong>0402</strong>.</li>
+        <li>For SMT ICs, we can do QFNs, QFPs, DDPAKs, LGAs, SOPs, SOICs, but <strong>not</strong> BGAs.</li>
+        <li>For fine-pitch through-hole components (e.g. a USB-C receptacle), we may charge an additional fee for the added assembly complexity.</li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<script>
+(function () {
+
+  function PCBcost (x, y, layers, n) {
+    if (n < 3) { n = 3; }
+    return (layers * x * y * n) + 8;
+  }
+
+  function stencilCost (x, y, tst, bst, wage) {
+    var q, m, z;
+    if (tst == 1) { q = 1.60 * (x + 2) * (y + 2); }
+    if (tst == 0) { q = 0; }
+    if (bst == 1) { m = 1.60 * (x + 2) * (y + 2); }
+    if (bst == 0) { m = 0; }
+    z = q + m + (wage * (1/60) * stencilJigTime (tst, bst));
+    return z;
+  }
+
+  function stencilJigTime (tst, bst) {
+    var q, m;
+    if (tst == 1) { q = 30; }
+    if (tst == 0) { q = 0; }
+    if (bst == 1) { m = 30; }
+    if (bst == 0) { m = 0; }
+    return q + m;
+  }
+
+  function solderPasteTime (n, smt, th, tst, bst) {
+    var q, m;
+    if (tst == 1) { q = 6 * n; }
+    if (tst == 0) { q = 0; }
+    if (bst == 1) { m = 6 * n; }
+    if (bst == 0) { m = 0; }
+    return q + m;
+  }
+
+  function solderCost (n, smt, th, tst, bst, wage) {
+    var q, m;
+    q = wage * (1/60) * solderPasteTime (n, smt, th, tst, bst);
+    m = (0.05 * smt) + (0.10 * th);
+    return q + m;
+  }
+
+  function assemblyTime (n, smt, th) {
+    return n * ((0.5 * smt) + (2 * th));
+  }
+
+  function assemblyCost (n, smt, th, wage) {
+    return wage * (1/60) * n * ((0.5 * smt) + (2 * th));
+  }
+
+  function totalCost (labor, components, th, wage) {
+    return wage * (1/60) * laborTime (n, smt, th);
+  }
+
+  function reflowCost (n, sides) {
+    return 0.65 * n * sides;
+  }
+
+
+
+	var fishWeight = document.getElementById("fishWeight");
+	if (fishWeight) {
+		fishWeight.onsubmit = function () {
+      var bom, x, y, n, smt, th, layers, sides, tst, bst, wage, cship, ship, speed, w;
+      bom = parseFloat(fishWeight.BOM.value);
+      x = parseFloat(fishWeight.width.value);
+      y = parseFloat(fishWeight.height.value);
+      n = parseInt(fishWeight.n.value);
+      smt = parseInt(fishWeight.SMT.value);
+      th = parseInt(fishWeight.TH.value);
+      if (document.getElementById("tlayers").checked) { layers = 2 };
+      if (document.getElementById("flayers").checked) { layers = 4 };
+      if (document.getElementById("oside").checked) { sides = 1 };
+      if (document.getElementById("tsides").checked) { sides = 2 };
+      if (document.getElementById("tystencil").checked) { tst = 1 };
+      if (document.getElementById("tnstencil").checked) { tst = 0 };
+      if (document.getElementById("bystencil").checked) { bst = 1 };
+      if (document.getElementById("bnstencil").checked) { bst = 0 };
+      if (document.getElementById("nspeed").checked) { speed = 1 };
+      if (document.getElementById("fspeed").checked) { speed = 1.5 };
+      if (document.getElementById("espeed").checked) { speed = 2 };
+      if (document.getElementById("nship").checked) { ship = 7.99 };
+      if (document.getElementById("fship").checked) { ship = 11.99 };
+      if (document.getElementById("eship").checked) { ship = 19.99 };
+      if (document.getElementById("bytelex").checked) { w = 1 };
+      if (document.getElementById("byclient").checked) { w = 0 };
+      wage = 15;
+
+      var totalCOST, totalCOSTPER, pcbCOST, pcbCOSTPER
+      var stencilCOST, stencilCOSTPER, assemblyCOST, assemblyCOSTPER
+      var solderCOST, solderCOSTPER, componentCOST, componentCOSTPER;
+      var reflowCOST, reflowCOSTPER;
+
+      if (w == 1 && (smt + th) > 0) {
+        if (speed == 1) { cship = (0.1 * (smt + th)) + 7.99; }
+        if (speed == 1.5) { cship = (0.1 * (smt + th)) + 11.99; }
+        if (speed == 2) { cship = (0.1 * (smt + th)) + 19.99; }
+      }
+      if (w == 0 || (smt + th) == 0) { cship = 0; }
+
+      pcbCOST = (Math.round (100 * PCBcost (x, y, layers, n))) / 100;
+      pcbCOSTPER = (Math.round (100 * (1 / n) * PCBcost (x, y, layers, n))) / 100;
+      stencilCOST = (Math.round (100 * stencilCost (x, y, tst, bst, wage))) / 100;
+      stencilCOSTPER = (Math.round (100 * (1 / n) * stencilCost (x, y, tst, bst, wage))) / 100;
+      solderCOST = (Math.round (100 * solderCost (n, smt, th, tst, bst, wage))) / 100;
+      solderCOSTPER = (Math.round (100 * (1 / n) * solderCost (n, smt, th, tst, bst, wage))) / 100;
+      assemblyCOST = (Math.round (100 * speed * assemblyCost (n, smt, th, wage))) / 100;
+      assemblyCOSTPER = (Math.round (100 * (1 / n) * speed * assemblyCost (n, smt, th, wage))) / 100;
+      reflowCOST = (Math.round (100 * speed * reflowCost (n, sides))) / 100;
+      reflowCOSTPER = (Math.round (100 * (1 / n) * speed * reflowCost (n, sides))) / 100;
+      componentCOST = bom;
+      componentCOSTPER = (Math.round (100 * (1 / n) * bom)) / 100;
+      totalCOST = (Math.round (100 * (pcbCOST + stencilCOST + ship + cship + solderCOST + assemblyCOST + reflowCOST + componentCOST))) / 100;
+      totalCOSTPER = (Math.round (100 * (1 / n) * totalCOST)) / 100;
+
+
+      fishWeight.totalcost.value = totalCOST;
+      fishWeight.totalcostper.value = totalCOSTPER;
+      fishWeight.pcbcost.value = pcbCOST;
+      fishWeight.pcbcostper.value = pcbCOSTPER;
+      fishWeight.stencilcost.value = stencilCOST;
+      fishWeight.stencilcostper.value = stencilCOSTPER;
+      fishWeight.shipcost.value = ship;
+      fishWeight.cshipcost.value = cship;
+      fishWeight.soldercost.value = solderCOST;
+      fishWeight.soldercostper.value = solderCOSTPER;
+      fishWeight.assemblycost.value = assemblyCOST;
+      fishWeight.assemblycostper.value = assemblyCOSTPER;
+      fishWeight.reflowcost.value = reflowCOST;
+      fishWeight.reflowcostper.value = reflowCOSTPER;
+      fishWeight.componentcost.value = componentCOST;
+      fishWeight.componentcostper.value = componentCOSTPER;
+			return false;
+		};
+	}
+}());
+</script>
+
+
+  </body>
+</html>
