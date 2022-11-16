@@ -4,6 +4,7 @@
 #include <iostream>
 
 #define LED 2
+#define RELAY_IN 15
 
 const char* ssid     = "MOTOA176";
 const char* password = "3eak9ekn25";
@@ -24,6 +25,7 @@ void setup()
     delay(10);
 
     pinMode(LED, OUTPUT);
+    pinMode(RELAY_IN, OUTPUT);
 
     // We start by connecting to a WiFi network
 
@@ -57,11 +59,22 @@ void setup()
 
 void loop()
 {
-
+    Serial.println ("stop 1");
     client.print(request);
-                  
-    while (client.available() == 0) { }
 
+    Serial.println ("stop 2");
+    unsigned long timeout = millis();
+    while (client.available() == 0) { 
+      if (millis() - timeout > 3000) {
+            Serial.println(">>> Client Timeout !");
+            client.stop();
+            delay (1000);
+            client.connect (host, httpPort);
+            return;
+      }
+    }
+
+    Serial.println ("stop 3");
     while(client.available()) {
         String line = client.readStringUntil('\r');
         if (line.length() == 2) {
@@ -76,8 +89,14 @@ void loop()
           Serial.print('\t');
           Serial.print(val == 3 && prev_val == 2);
           Serial.print('\n');
-          if (val == 3 && prev_val == 2) digitalWrite (LED, HIGH);
-          else digitalWrite (LED, LOW);
+          if (val == 3 && prev_val == 2) {
+            digitalWrite (LED, HIGH);
+            digitalWrite (RELAY_IN, HIGH);
+          }
+          else {
+            digitalWrite (LED, LOW);
+            digitalWrite (RELAY_IN, LOW);
+          }
         }
     }
 }
