@@ -2,14 +2,18 @@
 #include <WiFi.h>
 #include <cstring>
 #include <iostream>
+#include <time.h>
+#include <string.h>
 
 #define LED 2
 #define RELAY_IN 15
 
-const char* ssid     = "MOTOA176";
-const char* password = "3eak9ekn25";
+const long PASS     = 5829;
 
-const char* host = "www.timfoldy-porto.com";
+const char* ssid      = "MOTOA176";
+const char* password  = "3eak9ekn25";
+
+const char* host      = "www.timfoldy-porto.com";
 
 WiFiClient client;
 const int httpPort = 80;
@@ -17,7 +21,23 @@ String url = "http://www.timfoldy-porto.com/random/data2.txt";
 String request;
 int val = 0;
 int prev_val = 0;
-char str[3];
+char cs_line[16];
+bool debug = false;
+
+const char* ntpServer = "pool.ntp.org";
+const long  gmtOffset_sec = 0;
+const int   daylightOffset_sec = 0;
+time_t epoch;
+
+void retrieveTime()
+{
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("Failed to obtain time");
+    return;
+  }
+  epoch = mktime(&timeinfo);
+}
 
 void setup()
 {
@@ -27,10 +47,6 @@ void setup()
     pinMode(LED, OUTPUT);
     pinMode(RELAY_IN, OUTPUT);
 
-    // We start by connecting to a WiFi network
-
-    Serial.println();
-    Serial.println();
     Serial.print("Connecting to ");
     Serial.println(ssid);
 
@@ -46,6 +62,9 @@ void setup()
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
 
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    retrieveTime();
+
     if (!client.connect(host, httpPort)) { Serial.println("connection failed"); }
 
     request = String("GET ") + url + " HTTP/1.1\r\n" +
@@ -59,10 +78,10 @@ void setup()
 
 void loop()
 {
-    Serial.println ("stop 1");
+    if (debug) Serial.println ("stop 1");
     client.print(request);
 
-    Serial.println ("stop 2");
+    if (debug) Serial.println ("stop 2");
     unsigned long timeout = millis();
     while (client.available() == 0) { 
       if (millis() - timeout > 3000) {
@@ -74,29 +93,29 @@ void loop()
       }
     }
 
-    Serial.println ("stop 3");
+    if (debug) Serial.println ("stop 3");
     while(client.available()) {
         String line = client.readStringUntil('\r');
-        if (line.length() == 2) {
-          prev_val = val;
-          strcpy(str, line.c_str());
-          val = atoi(str);
-          Serial.print(val);
-          Serial.print('\t');
-          Serial.print(val == 3);
-          Serial.print('\t');
-          Serial.print(prev_val == 2);
-          Serial.print('\t');
-          Serial.print(val == 3 && prev_val == 2);
-          Serial.print('\n');
-          if (val == 3 && prev_val == 2) {
-            digitalWrite (LED, HIGH);
-            digitalWrite (RELAY_IN, HIGH);
-          }
-          else {
-            digitalWrite (LED, LOW);
-            digitalWrite (RELAY_IN, LOW);
-          }
+        if (line.length() == 16) {
+          std::string str(line.c_str());
+          std::string s_code = str.substr (0,5);
+          std::string s_time = str.substr (5,12);
+          long l_code = std::stol (s_code);
+          long l_time = std::stol (s_time);
+          Serial.println (l_code);
+          Serial.println (l_time);
+          Serial.println (epoch);
+            if (l_time == epoch || l_time == epoch-1) {
+              if (l_code == PASS) {
+                digitalWrite (LED, HIGH);
+                digitalWrite (RELAY_IN, HIGH);
+                delay (500);
+                digitalWrite (LED, LOW);
+                digitalWrite (RELAY_IN, LOW);
+              }
+            }
         }
     }
+
+    retrieveTime();
 }
