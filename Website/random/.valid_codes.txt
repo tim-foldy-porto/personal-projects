@@ -1,0 +1,5 @@
+format: code, start epoch, end epoch
+epoch convertor for reference: https://www.epochconverter.com/
+
+613, 0000000000, 1925009999
+522, 1668808800, 1669050000

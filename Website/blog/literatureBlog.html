@@ -5,21 +5,16 @@
 
     <style>
       .left {
-        position: absolute;
+        float: left;
         width: 30%;
         margin-top: 50px;
       }
       .center {
-        position: absolute;
+        float: left;
         width: 30%;
-        left: 25%;
+        /* left: 25%; */
         margin-top: 50px;
       }
-      .right {
-        position: absolute;
-        width: 30%;
-        left: 50%;
-        margin-top: 50px;
       }
     </style>
 
@@ -28,76 +23,103 @@
   <body>
 
 
-    <h1>Literature blog</h1>
+    <h1>Literature reviews</h1>
 
-    <a href="../blog.html">Back to main blog</a>
+    <a href="../writing.html">Back to all writing</a>
 
     <p>
-      I've read a lot of good books in my life. But I only started this blog in 2019. So you'll have to make do
+      Though I've read many good books in my life, I only started this blog in 2019 so you'll have to make do
       with my thoughts on books I've read since then.
     </p>
-  <div class="left">
-      <em>By author</em>:
-      <ul>
-        <li><a href=#JaneAusten>Jane Austen</a></li>
-        <li><a href=#FyodorDostoevsky>Fyodor Dostoevsky</a></li>
-        <li><a href=#GeorgeEliot>George Eliot</a></li>
-        <li><a href=#HenryJames>Henry James</a></li>
-        <li><a href=#JonMcGregor>Jon McGregor</a></li>
-        <li><a href=#JoseSaramago>Jose Saramago</a></li>
-        <li><a href=#LeoTolstoy>Leo Tolstoy</a></li>
-        <li><a href=#EdithWharton>Edith Wharton</a></li>
-        <li><a href=#ElizabethWurtzel>Elizabeth Wurtzel</a></li>
-      </ul>
+    <div style="position: relative; float: top;">
+      <div class="left">
+        <em>By author and title</em>:
+        <ul>
+          <li><a href=#JaneAusten>Jane Austen</a></li>
+            <ul>
+              <li><a href=#emma>Emma</a></li>
+              <li><a href=#mansfieldpark>Mansfield Park</a></li>
+              <li><a href=#persuasion>Persuasion</a></li>
+              <li><a href=#senseAndSensibility>Sense and Sensibility</a></li>
+            </ul>
+          <li><a href=#FyodorDostoevsky>Fyodor Dostoevsky</a></li>
+            <ul>
+              <li><a href=#houseofthedead>The House of the Dead</a></li>
+            </ul>
+          <li><a href=#GeorgeEliot>George Eliot</a></li>
+            <ul>
+              <li><a href=#middlemarch>Middlemarch</a></li>
+            </ul>
+          <li><a href=#HenryJames>Henry James</a></li>
+            <ul>
+              <li><a href=#ambassadors>The Ambassadors</a></li>
+              <li><a href=#american>The American</a></li>
+              <li><a href=#bostonians>The Bostonians</a></li>
+              <li><a href=#daisymiller>Daisy Miller</a></li>
+              <li><a href=#portraitofalady>The Portrait of a Lady</a></li>
+              <li><a href=#washingtonSquare>Washington Square</a></li>
+            </ul>
+          <li><a href=#hermanMelville>Herman Melville</a></li>
+            <ul>
+              <li><a href=#mobydick>Moby Dick</a></li>
+            </ul>
+          <li><a href=#JonMcGregor>Jon McGregor</a></li>
+            <ul>
+              <li><a href=#reservoir13>Reservoir 13</a></li>
+            </ul>
+          <li><a href=#VietThanhNguyen>Viet Thanh Nguyen</a></li>
+            <ul>
+              <li><a href=#sympathizer>The Sympathizer</a></li>
+            </ul>
+          <li><a href=#JoseSaramago>Jose Saramago</a></li>
+            <ul>
+              <li><a href=#allthenames>All the Names</a></li>
+            </ul>
+          <li><a href=#LeoTolstoy>Leo Tolstoy</a></li>
+            <ul>
+              <li><a href=#annakarenina>Anna Karenina</a></li>
+              <li><a href=#kreutzersonata>The Kreutzer Sonata (and other short stories)</a></li>
+            </ul>
+          <li><a href=#EdithWharton>Edith Wharton</a></li>
+            <ul>
+              <li><a href=#houseofmirth>The House of Mirth</a></li>
+            </ul>
+          <li><a href=#ElizabethWurtzel>Elizabeth Wurtzel</a></li>
+            <ul>
+              <li><a href=#prozacnation>Prozac Nation</a></li>
+            </ul>
+        </ul>
+      </div>
+      <div class="center">
+        <em>By date</em>:
+        <ul>
+          <li><a href=#emma>2019 June 29 &mdash; Emma</a></li>
+          <li><a href=#senseAndSensibility>2019 July 20 &mdash; Sense and Sensibility</a></li>
+          <li><a href=#middlemarch>2019 September 14 &mdash; Middlemarch</a></li>
+          <li><a href=#persuasion>2019 October 6 &mdash; Persuasion</a></li>
+          <li><a href=#portraitofalady>2019 December 5 &mdash; The Portrait of a Lady</a></li>
+          <br>
+          <li><a href=#mansfieldpark>2020 January 16 &mdash; Mansfield Park</a></li>
+          <li><a href=#prozacnation>2020 January 19 &mdash; Prozac Nation</a></li>
+          <li><a href=#reservoir13>2020 July 21 &mdash; Reservoir 13</a></li>
+          <li><a href=#washingtonSquare>2020 August 1 &mdash; Washington Square</a></li>
+          <li><a href=#kreutzersonata>2020 August 7 &mdash; The Kreutzer Sonata (and other short stories)</a></li>
+          <li><a href=#ambassadors>2020 September 25 &mdash; The Ambassadors</a></li>
+          <li><a href=#houseofthedead>2020 October 25 &mdash; The House of the Dead</a></li>
+          <li><a href=#daisymiller>2020 October 30 &mdash; Daisy Miller</a></li>
+          <li><a href=#houseofmirth>2020 November 15 &mdash; The House of Mirth</a></li>
+          <br>
+          <li><a href=#annakarenina>2021 January 12 &mdash; Anna Karenina</a></li>
+          <br>
+          <li><a href=#bostonians>2022 March 15 &mdash; The Bostonians</a></li>
+          <li><a href=#sympathizer>2022 May 22 &mdash; The Sympathizer</a></li>
+          <li><a href=#mobydick>2022 July 27 &mdash; Moby Dick</a></li>
+          <li><a href=#american>2022 September 2 &mdash; The American</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="center">
-      <em>By title</em>:
-      <ul>
-        <li><a href=#allthenames>All the Names</a></li>
-        <li><a href=#annakarenina>Anna Karenina</a></li>
-        <li><a href=#emma>Emma</a></li>
-        <li><a href=#daisymiller>Daisy Miller</a></li>
-        <li><a href=#mansfieldpark>Mansfield Park</a></li>
-        <li><a href=#middlemarch>Middlemarch</a></li>
-        <li><a href=#persuasion>Persuasion</a></li>
-        <li><a href=#prozacnation>Prozac Nation</a></li>
-        <li><a href=#reservoir13>Reservoir 13</a></li>
-        <li><a href=#senseAndSensibility>Sense and Sensibility</a></li>
-        <li><a href=#ambassadors>The Ambassadors</a></li>
-        <li><a href=#houseofmirth>The House of Mirth</a></li>
-        <li><a href=#houseofthedead>The House of the Dead</a></li>
-        <li><a href=#kreutzersonata>The Kreutzer Sonata (and other short stories)</a></li>
-        <li><a href=#portraitofalady>The Portrait of a Lady</a></li>
-        <li><a href=#washingtonSquare>Washington Square</a></li>
-      </ul>
-    </div>
-    <div class="right">
-      <em>By date</em>:
-      <ul>
-        <li><a href=#emma>29 June 2019 &mdash; Emma</a></li>
-        <li><a href=#senseAndSensibility>20 July 2019 &mdash; Sense and Sensibility</a></li>
-        <li><a href=#middlemarch>14 September 2019 &mdash; Middlemarch</a></li>
-        <li><a href=#persuasion>6 October 2019 &mdash; Persuasion</a></li>
-        <li><a href=#portraitofalady>5 December 2019 &mdash; The Portrait of a Lady</a></li>
-        <li><a href=#mansfieldpark>16 January 2020 &mdash; Mansfield Park</a></li>
-        <li><a href=#prozacnation>19 January 2020 &mdash; Prozac Nation</a></li>
-        <li><a href=#reservoir13>21 July 2020 &mdash; Reservoir 13</a></li>
-        <li><a href=#washingtonSquare>1 August 2020 &mdash; Washington Square</a></li>
-        <li><a href=#kreutzersonata>7 August 2020 &mdash; The Kreutzer Sonata (and other short stories)</a></li>
-        <li><a href=#ambassadors>25 September 2020 &mdash; The Ambassadors</a></li>
-        <li><a href=#houseofthedead>25 October 2020 &mdash; The House of the Dead</a></li>
-        <li><a href=#daisymiller>30 October 2020 &mdash; Daisy Miller</a></li>
-        <li><a href=#houseofmirth>15 November 2020 &mdash; The House of Mirth</a></li>
-        <li><a href=#annakarenina>12 January 2021 &mdash; Anna Karenina</a></li>
 
-
-
-
-      </ul>
-    </div>
-      <br><br><br>
-    </p>
-  <div style="position: relative; margin-top: 400px;">
+  <div style="margin-top: 700px;">
     <hr>
     <div id="JaneAusten">
       <h2>Jane Austen</h2><br>
@@ -197,7 +219,7 @@
               "'You are mistaken, Elinor,' she said warmly, 'in supposing I know very little of Willoughby. I have not known him long indeed,
               but I am much better acquainted with him than I am with any other creature in the world, except yourself and mama. It is not time or
               opportunity that is to determine intimacy; it is disposition alone. Seven years would be insufficient to make some people acquainted with
-              each other, and seven days are more than enough for others. I should hold myself guilty of greater imporpriety in accepting a horse from
+              each other, and seven days are more than enough for others. I should hold myself guilty of greater impropriety in accepting a horse from
               my brother than from Willoughby. Of John I know very little, though we have lived together for years; but of Willoughby my judgement has
               long been formed.'" (pg. 49) - Marianne to Elinor explaining why she feels okay accepting a horse from Willoughby.<br><br>
             </li>
@@ -413,6 +435,128 @@
     <div id="HenryJames">
       <h2>Henry James</h2><br>
 
+      <div id="ambassadors">
+        <h3>Thoughts on <em>The Ambassadors</em></h3>
+        <h4>25 September 2020 &mdash; Read time: 19 hrs.</h4>
+        <p>
+          I've been putting off writing this post for a few weeks now because this book really did a number on me. It wasn't like <em>Middlemarch</em>, which took my heart on a roller coaster ride, and it wasn't like
+          <em>Portrait of a Lady</em>, which stuck with me by virtue of it being a masterfully constructed novel. Rather, <em>The Ambassadors</em> threw my mind into a state of confusion and uncertainty,
+          partially from the impenetrability of the text itself and partially from the complexity of the content. I'm going to hesitantly say that the book was <strong>good</strong> and that
+          I liked it. Another part of me, however, says that I'm not qualified to hold such an opinion because I don't think I fully got the book. Sure, I read it, but it was more like
+          when you read something and then realize that you weren't actually reading it &mdash; your eyes scanned the page but your mind was elsewhere &mdash; but for the entire book. Most of the
+          time I felt as if I were wading about in murky water, being pushed and pulled in one emotional direction or another by the events of the novel. Periodically,
+          my head popped above the surface and I was able to appreciate, in complete clarity, some truly beautiful passages which pushed my mind and spirit to an identifiably wonderful place. See,
+          it's funny that I'm using water imagery because James uses water imagery a ton throughout the novel. In fact, most of the passages that engendered the aforementioned feeling of beauty
+          were such water-related metaphors. Maybe I did learn a thing or too after all. There are a few things I can say with certainty about the book: it's characterization of Paris was unlike
+          any I've ever seen and now I really want to go there and I want to <em>be</em> Chad Newsome; the beginning of the book sets up a <em>Heart of Darkness</em> type scenario, though I had a hard time
+          deciding who was Kurtz, until I ultimately came to the conclusion that no one was Kurtz and that maybe <em>The Ambassadors</em> wasn't really like HoD; the title of the book seems to refer
+          to the many ways in which various characters act as ambassadors, as people who act on behalf of others and whose motivations aren't their own &mdash; James seems generally interested in the
+          various ways people can be <em>not</em> free.
+          <br><br>
+          <strong>Update 10/30/20:</strong> I can now see how <em>The Ambassadors</em> reaps the harvest of the seeds which <em>Daisy Miller</em> sowed. Imagine the astronaut meme: "wait, it's all America vs. Europe?",
+          "Always has been."
+          <br>
+          <ul>
+            <li>
+              "She [Maria Gostrey] gave him however for the hour, as she had given him the previous day, no further sign than to show how she dealt with boys; meeting them with the air of old Parisian practice that
+              she had for every one, for everything, in turn. Wonderful about the delicate daubs, masterful about the way to make tea, trustful about the legs of chairs and familiarly reminiscent of
+              those, in the other time, the named, the numbered or the caricatured, who had flourished or failed, disappeared or arrived..." - (pg. 147-148, Penguin Classics edition)
+            </li><br>
+            <li>
+              "Waymarsh himself, for the occasion, was drawn into the eddy; it absolutely, though but temporarily, swallowed him down, and there were days when Strether seemed to bump against him
+              as a sinking swimmer might brush a submarine object. The fathomless medium held them &mdash; Chad's manner was the fathomless medium; and our friend felt as if they had passed each
+              other, in their deep immersion, with the round impersonal eye of silent fish." - (pg. 181)
+            </li><br>
+            <li>
+              "This note indeed the next thing overflowed for Strether into a quiet stream of demonstration that as soon as he had let himself go he felt as the real relief. It had consciously gathered
+              to a head, but the reservoir had filled sooner than he knew, and his companion's touch was to make the waters spread. There were some things that had to come in time if they were to come at all.
+              If they didn't come in time they were lost for ever. It was the general sense of them that had overwhelmed him with its long slow rush." (pg. 214)
+            </li><br>
+            <li>
+              "She had trusted him, liked him, and it was to come back to him afterwards that she had told him things. She had dipped into the waiting medium at last and found neither surge not chill &mdash;
+              nothing but the small splash she could herself make in the pleasant warmth, nothing but the safety of dipping and dipping again." (pg. 248)
+            </li><br>
+            <li>
+              "It was as if he had found out he was tired &mdash; tired not from his walk, but from that inward exercise which had known, on the whole, for three months, so little intermission.
+              That was it &mdash; when once they were off he had dropped; this moreover was what he had dropped to, and now he was touching bottom. He was kept luxuriously quiet, soothed and amused by
+              the consciousness of what he had found at the end of his descent. It was very much what he had told Maria Gostrey he should like to stay on for, the hugely distributed Paris of summer,
+              alternately dazzling and dusky, with a weight lifted for him off its columns and cornices and with shade and air in the flutter of awnings as wide as avenues." (pg. 455)
+            </li><br>
+          </ul>
+        </p>
+        <br>
+      </div> <!-- closing tag for The Ambassadors -->
+
+      <div id="americans">
+        <h3>Thoughts on <em>The American</em></h3>
+        <h4>2 September 2022 &mdash; Read time: 18 hrs.</h4>
+        <p>
+          I bought this book at Blackwell's Bookshop in Oxford as a token by which to remember my trip. I was half successful in that mission, as <em>The American</em> ended up not being one of James' finest works, but still the idea of an American abroad inspired in me some introspection about my own citizenship and what it means to be an American today. The concept and reality of America was very different in James' time, yet there are unchanging undercurrents of America that did and still create a certain type of persona &mdash; a persona who's features are heightened and clarified when put into a non-American environment &mdash; that lead people to identify a unique "American personality." James explores this concept in all his books; few however are as pointed as this one about their mission to study what happens when a prototypical American lands himself in the heart of old-world Europe.
+          <br><br>
+          As always, James is perfect in his pursuit of realism. One reason I like the style so much is that it feels authentic &mdash; like I'm really there, in person, watching the characters talk and interact with their environment as if it were real life. Obviously that's the point of realism, but I feel as if that feature lends a certain gravitas and emotional power so as to elevate novels from good to great. Fantastical stories or otherwise unrealistic scenarios detract from my sense of my own humanity, and make it more difficult for me to feel whatever the author is trying to get me to feel.
+          <br><br>
+          Other notes: the passage on page 425 is an excellent example of a character changing their mind. I think that is a very difficult thing to depict, because often changing ones mind is a gradual process and any attempt to portray it as a quick decision, which is necessary to keep up the pace of the writing, feels unrealistic. It's a catch-22. But James successfully threads the needle of keeping the action alive while still writing real-life, and for that I am appreciative.
+
+          <ul>
+            <li>
+              [Valentin] "There is a delightful simplicity in that remark! Everything is to hinder me. To begin with, I have not a penny."<br>
+              [Newman] "I had not a penny when I began to range." <br>
+              "Ah, but your poverty was your capital. Being an American, it was impossible you should remain what you were born, and being born poor &mdash; do I understand it? &mdash; it was therefore inevitable that you should become rich. You were in a position that makes one's mouth water; you looked round you and saw a world full of things you had only to step up to and take hold of. When I was twenty, I looked around me and saw a world with everything ticketed 'Hands off!' and the deuce of it was that the ticket seems meant only for me. I couldn't go into business, I couldn't make money, because I was a Bellegarde. I couldn't go into politics, because I was a Bellegarde &mdash; the Bellegardes don't recognize the Bonapartes. I couldn't go into literature, because I was a dunce. I couldn't marry a rich girl, because no Bellegarde had ever married a <em>roturiere</em>, and it was not proper that I should begin. We shall have to come to it, yet. Marriageable heiresses, <em>de notre bord</em>", are not to be had for nothing; it must be name for name, and fortune for fortune. The only thing I could do was to go and fight for the Pope. That I did, punctiliously, and received an apostolic flesh-wound at Castelfidardo. It did neither the Holy Father nor me any good, that I could see. Rome was doubtless a very amusing place in the days of Caligula, but it has sadly fallen off since. --- pg. 140, Penguin Classics
+            </li><br>
+            <li>
+              [Valentin] "My place in life was made for me, and it seemed easy to occupy it. But you who, as I understand it, have made your own place, you who, as you told us the other day, have manufactured wash-tubs &mdash; you strike me, somehow, as a man who stands at his ease, who looks at things from a height. I fancy you going about the world like a man travelling on a railroad in which he owns a large amount of stock. You make me feel as if I had missed something. What is it?" <br>
+              "It is the proud consciousness of honest toil &mdash; of having manufactured a few wash-tubs," said Newman, at once jocose and serious. <br>
+              "Oh no; I have seen men who had done even more, men who had made not only wash-tubs, but soap &mdash; strong-smelling yellow soapd, in great bars; and they never made me the least uncomfortable." --- pg. 142
+            </li><br>
+            <li>
+              When the heart has a heavy weight upon it, it hardly matters whether the weight be of gold or of lead; when, at any rate, happiness passes into that place in which it becomes identical with pain, a man may admit that the reign of wisdom is temporarily suspended. --- pg. 222
+            </li><br>
+            <li>
+              [Madame de Cintre] "I don't like the way you speak of my brother Valentin." Hereupon Newman, surprised, said that he had never spoken of him but kindly.<br>
+              "It is too kindly," said Madame de Cintre. "It is a kindness that costs nothing; it is the kindness you show to a child. It is as if you didn't respect him." --- pg. 234
+            </li><br>
+            <li>
+              The duchess, as she talked, fequently looked at [Newman] with a smile, as if to intimate, in the charming manner of her nation, that it lay only with him to say something very much to the point. But he said nothing at all, and at last his thoughts began to wander. A singular feeling came over him &mdash; a sudden sense of the folly of his errand. What under the sun had he to say to the duchess, after all? Wherein would it profit him to tell her that the Bellegardes were traitors and that the old lady, into the bargain, was a murderess? He seemed morally to have turned a sort of somersault, and to find things looking differently in consequence. He felt a sudden stiffening of his will and quickening of his reserve. What in the world had he been thinking of when he fancied the duchess could help him, and that it would conduce to his comfort to make her think ill of the Bellegardes. What did her opinion of the Bellegardes matter to him? It was only a shade more important than the opinion the Bellegardes entertained of her. The duchess help him &mdash; that cold, stout, soft, artificial woman help him? &mdash; she who in the last twenty minutes had built up between them a wall of polite conversation in which she evidently flattered herself that he would never find a gate. Had it come to that &mdash; that he was asking favours of conceited sympathy to give? He rested his arms on his knees, and sat for some minutes staring into his hat. As he did so his ears tingled &mdash; he had come very near being an ass. Whether of no the duchess would hear his story, he wouldn't tell it. Was he to sit there another half hour for the sake of exposing the Bellegardes? The Bellegardes be hanged! He got up abruptly, and advanced to shake hands with his hostess. --- pg. 425
+            </li>
+          </ul>
+        </p>
+        <br>
+      </div> <!-- closing tag for The American -->
+
+      <div id="bostonians">
+        <h3>Thoughts on <em>The Bostonians</em></h3>
+        <h4>15 March 2022 &mdash; Read time: 19 hrs.</h4>
+        <p>
+
+          Eh, wasn't great. It had some interesting moments, but overall it was disappointing for a Henry James novel. He's set my standards too high!
+
+          <ul>
+            <li>
+              "Don't you care for human progress?" Miss Chancellor went on. <br>
+              "I don't know&mdash;I never saw any. Are you going to show me some?" [Ransom] --- pg. 19, Penguin Modern Classics
+            </li><br>
+            <li>
+              [About Miss Chancellor]"It's beautiful, the way she draws you out," Verena had said to her mother; "there's something so searching that the first time I visited her it quite realized my idea of the Day of Judgement. But she seems to show all that's in herself at the same time, and then you see how lovely it is. She's just as pure as she can live; you see if she is not, when you know her. She's so noble herself that she makes you feel as if you wouldn't want to be less so. She doesn't care for anything but the elevation of our sex; if she can work a little toward that, it's all she asks. I can tell you, she kindles me; she does, mother, really. She doesn't care a speck what she wears&mdash;only to have an elegant parlour. Well, she <em>has</em> got that; it's a regular dream-like place to sit." --- pg. 87
+            </li><br>
+            <li>
+              When this young lady [Miss Chancellor], after a struggle with the winds and waves of emotion, emerged into the quiet stream of a certain high reasonableness, she presented her most graceful aspect; she had a tone of softness and sympathy, a gentle dignity, a serenity of wisdom, which sealed the appreciation of those who knew her well enough to like her, and which always impressed Verena as something almost august. --- pg. 120
+            </li><br>
+            <li>
+              The western windows of Olive's drawing-room, looking over the water, took in the red sunsets of winter; the long, low bridge that crawled, on its staggering posts, across the Charles; the casual patches of ice and snow; the desolate suburban horizons, peeled and made bald by the rigour of the season; the general hard, cold void of the prospect; the extrusion, at Charlestown, at Cambridge, of a few chimneys and steeples, straight, sordid tubes of factories and engine-shops, or spare, heavenward finger of the New England meeting-house. There was something inexorable in the poverty of the scene, shameful in the meanness of its details, which gave a collective impression of boards and tin and frozen earth, sheds and rotting piles, railway-lines striding flat acoss a thoroughfare of puddles, and tracks of the humbler, the universal horse-car, traversing obliquely this path of danger; loose fences, vacant lots, mounds of refuse, yards bestrewn with iron pipes, telegraph poles, and bare wooden backs of places. Verena thought such a view lovely, and she was by no means without excuse when, as the afternoon closed, the ugly picture was tinted with a clear, cold rosiness. --- pg. 152
+            </li><br>
+            <li>
+              "Now there is one place where perhaps it would be indelicate to take a Mississippian," Verena said, after this episode. "I mean the great place that towers above the others&mdash;that big building with the beautiful pinnacles, which you see from every point." But Basil Ransom had heard of the great Memorial Hall; he knew what memories it enshrined, and the worst that he should have to suffer there; and the ornate, overtopping structure, which was the finest piece of architecture he had ever seen, had moreover solicited his enlarged curiosity for the last half-hour. ... As he approached it with Vernea she suddenly stopped, to decline responsibility. "Now mind, if you don't like what's inside, it isn't my fault."<br>
+              He looked at her an instant, smiling. "Is there anything against Mississippi?"<br>
+              "Well, no, I don't think she is mentioned. But there is a great praise of our young men in the war."<br>
+              "It says they were brave, I suppose."<br>
+              "Yes, it says so in Latin."<br>
+              "Well, so they were&mdash;I know somthing about that," Basil Ransom said. "I must be brave enough to face them&mdash;it isn't the first time." --- pg. 209
+            </li><br>
+          </ul>
+        </p>
+        <br>
+      </div> <!-- closing tag for The Bostonians -->
+
       <div id="daisymiller">
         <h3>Thoughts on <em>Daisy Miller</em></h3>
         <h4>30 October 2020 &mdash; Read time: 2 hrs.</h4>
@@ -476,58 +620,6 @@
         <br>
       </div> <!-- closing tag for Portrait of a Lady -->
 
-      <div id="ambassadors">
-        <h3>Thoughts on <em>The Ambassadors</em></h3>
-        <h4>25 September 2020 &mdash; Read time: 19 hrs.</h4>
-        <p>
-          I've been putting off writing this post for a few weeks now because this book really did a number on me. It wasn't like <em>Middlemarch</em>, which took my heart on a roller coaster ride, and it wasn't like
-          <em>Portrait of a Lady</em>, which stuck with me by virtue of it being a masterfully constructed novel. Rather, <em>The Ambassadors</em> threw my mind into a state of confusion and uncertainty,
-          partially from the impenetrability of the text itself and partially from the complexity of the content. I'm going to hesitantly say that the book was <strong>good</strong> and that
-          I liked it. Another part of me, however, says that I'm not qualified to hold such an opinion because I don't think I fully got the book. Sure, I read it, but it was more like
-          when you read something and then realize that you weren't actually reading it &mdash; your eyes scanned the page but your mind was elsewhere &mdash; but for the entire book. Most of the
-          time I felt as if I were wading about in murky water, being pushed and pulled in one emotional direction or another by the events of the novel. Periodically,
-          my head popped above the surface and I was able to appreciate, in complete clarity, some truly beautiful passages which pushed my mind and spirit to an identifiably wonderful place. See,
-          it's funny that I'm using water imagery because James uses water imagery a ton throughout the novel. In fact, most of the passages that engendered the aforementioned feeling of beauty
-          were such water-related metaphors. Maybe I did learn a thing or too after all. There are a few things I can say with certainty about the book: it's characterization of Paris was unlike
-          any I've ever seen and now I really want to go there and I want to <em>be</em> Chad Newsome; the beginning of the book sets up a <em>Heart of Darkness</em> type scenario, though I had a hard time
-          deciding who was Kurtz, until I ultimately came to the conclusion that no one was Kurtz and that maybe <em>The Ambassadors</em> wasn't really like HoD; the title of the book seems to refer
-          to the many ways in which various characters act as ambassadors, as people who act on behalf of others and whose motivations aren't their own &mdash; James seems generally interested in the
-          various ways people can be <em>not</em> free.
-          <br><br>
-          <strong>Update 10/30/20:</strong> I can now see how <em>The Ambassadors</em> reaps the harvest of the seeds which <em>Daisy Miller</em> sowed. Imagine the astronaut meme: "wait, it's all America vs. Europe?",
-          "Always has been."
-          <br>
-          <ul>
-            <li>
-              "She [Maria Gostrey] gave him however for the hour, as she had given him the previous day, no further sign than to show how she dealt with boys; meeting them with the air of old Parisian practice that
-              she had for every one, for everything, in turn. Wonderful about the delicate daubs, masterful about the way to make tea, trustful about the legs of chairs and familiarly reminiscent of
-              those, in the other time, the named, the numbered or the caricatured, who had flourished or failed, disappeared or arrived..." - (pg. 147-148, Penguin Classics edition)
-            </li><br>
-            <li>
-              "Waymarsh himself, for the occasion, was drawn into the eddy; it absolutely, though but temporarily, swallowed him down, and there were days when Strether seemed to bump against him
-              as a sinking swimmer might brush a submarine object. The fathomless medium held them &mdash; Chad's manner was the fathomless medium; and our friend felt as if they had passed each
-              other, in their deep immersion, with the round impersonal eye of silent fish." - (pg. 181)
-            </li><br>
-            <li>
-              "This note indeed the next thing overflowed for Strether into a quiet stream of demonstration that as soon as he had let himself go he felt as the real relief. It had consciously gathered
-              to a head, but the reservoir had filled sooner than he knew, and his companion's touch was to make the waters spread. There were some things that had to come in time if they were to come at all.
-              If they didn't come in time they were lost for ever. It was the general sense of them that had overwhelmed him with its long slow rush." (pg. 214)
-            </li><br>
-            <li>
-              "She had trusted him, liked him, and it was to come back to him afterwards that she had told him things. She had dipped into the waiting medium at last and found neither surge not chill &mdash;
-              nothing but the small splash she could herself make in the pleasant warmth, nothing but the safety of dipping and dipping again." (pg. 248)
-            </li><br>
-            <li>
-              "It was as if he had found out he was tired &mdash; tired not from his walk, but from that inward exercise which had known, on the whole, for three months, so little intermission.
-              That was it &mdash; when once they were off he had dropped; this moreover was what he had dropped to, and now he was touching bottom. He was kept luxuriously quiet, soothed and amused by
-              the consciousness of what he had found at the end of his descent. It was very much what he had told Maria Gostrey he should like to stay on for, the hugely distributed Paris of summer,
-              alternately dazzling and dusky, with a weight lifted for him off its columns and cornices and with shade and air in the flutter of awnings as wide as avenues." (pg. 455)
-            </li><br>
-          </ul>
-        </p>
-        <br>
-      </div> <!-- closing tag for The Ambassadors -->
-
       <div id="washingtonSquare">
         <h3>Thoughts on <em>Washington Square</em></h3>
         <h4>1 August 2020 &mdash; Read time: 6 hrs.</h4>
@@ -570,6 +662,22 @@
 
     <br><br><br>
 
+    <div id="hermanMelville">
+      <h2>Herman Melville</h2>
+      <div id="mobydick">
+        <h3>Thoughts on <em>Moby Dick</em></h3>
+        <h4>27 July 2022 &mdash; Read time: 27 hrs.</h4>
+        <p>
+          Ah, the sea.
+
+          <a href="./Moby_dick.pdf" target="_blank">Link to my favorite passages from <em>Moby Dick</em></a>
+          </table>
+        </p>
+      </div> <!-- closing tag for Reservoir 13 -->
+    </div> <!-- closing tag for Jon McGregor -->
+
+    <br><br><br>
+
     <div id="JonMcGregor">
       <h2>Jon McGregor</h2>
       <div id="reservoir13">
@@ -599,6 +707,28 @@
 
     <br><br><br>
 
+    <div id="VietThanhNguyen">
+      <h2>Viet Thanh Nguyen</h2>
+      <div id="sympathizer">
+        <h3>Thoughts on <em>The Sympathizer</em></h3>
+        <h4>22 May 2022 &mdash; Read time: 9.5 hrs.</h4>
+        <p>
+          I have generally positive things to say about <em>The Sympathizer</em> in all regards except the tone and the writing style. Nguyen is a good writer who I felt sometimes tried to hard to sound "literary." He would write a wonderful chapter with an enthralling plot and vivid characters, only to follow it up with a passage like this:
+          <ul>
+            <li>Saigon taime was fourteen hours off, although if one judged time by this clock, it was we who were fourteen hours off. Refugee, exile, immigrant &mdash; whatever species of displaced human we were, we did not simply live in two cultures, as celebrants of the great American melting pot imagined. Displaced people also lived in two time zones, the here and the there, the present and the past, being as we were reluctant time travelers. But while science fiction imagined time travelers as moving forward or backward in time, this timepiece deomnstrated a diferent chronology. The open secret of the clock, naked for all to see, was that we were only going in circles.</li>
+          </ul>
+          This passage is so close to being powerful, but instead it left me highlighting the passage and writing "ugh" in the margins. Something about this language feels corny, almost satirical, and that takes away from the effect of his otherwise excellent writing. Another line that particularly bothered me:
+          <ul>
+            <li>Some animals could see in the dark, but is was only humans who deliberately sought out every possible route into the darkness of our own interiors.</li>
+          </ul>
+          Of course, it is easy to overlook these passages as they are few and far between. On the whole, <em>The Sympathizer</em> was an entertaining read that probably deserves the Pulitzer it won in 2016, even if it was the literary equivalent of a teacher's pet. It's hard for me to evaluate books like this because they are so outside my normal digest. I don't often read books written after 1920, and when I do I hold them to very high standards that are rarely met, so the fact that I enjoyed this one probably means that it is an excellent book for its time period in my estimation, even if my instincts are reluctant to call it great.
+        </p>
+      </div> <!-- closing tag for The Sympathizer -->
+    </div> <!-- closing tag for Viet Thanh Nguyen -->
+    </div>
+
+    <br><br><br>
+
     <div id="LeoTolstoy">
       <h2>Leo Tolstoy</h2>
       <div id="annakarenina">
@@ -606,7 +736,7 @@
         <h4>12 January 2021 &mdash; Read time: 28 hrs.</h4>
           <p>
 
-            Fair warning: I'm writing this review in May 2021 (but backdating it to 12 January because that's when I finished the book), so my recollection of the events of the novel is a bit hazy. First things first, <a href="Anna_karenina.pdf" target="_blank">here's the compilation of my favorite passages</a>. <em>Anna Karenina</em> reminded me of <em>Middlemarch</em> in a lot of ways: both had a diverse and interwoven cast of fully-fleshed-out characters; both created a rich portrait of geographic space; both documented faithfully and accurately the various ways in which that space affected the lives of its inhabitants, and, conversely, how the characters imprinted onto that space; both had much to say about art and the perception of art. I liked Anna, Levin, Kitty, Koznyshev, and Oblonsky. I liked Levin's philosophizing on the theory of labour because I too think often about what it means to work and to employ. Are employers and employees fundamentally at odds? How ought a boss act and set policies? See <a href="Anna_karenina.pdf" target="_blank">pg. 344</a> for Levin's musings on this topic. My favorite scene was when Levin decided to work the fields alongside his labourers. Not only was it supremely entertaining, but it was a masterclass in using vivid imagination and empathy (on the part of Tolstoy) to explore complex social dynamics (between Levin and his employees, who had a mix of respect and disdain for him). We as readers of this scene were fortunate to see Levin grow and learn as he ponders the nature of labour while conducting first-hand research into the topic. I found it to be an absolutely brilliant forty-something pages. I hope you'll forgive the brevity of this review; certainly a book of this stature warrants much longer and more intelligent consideration, but frankly I don't have more to say. Reading it was a wonderful experience that I hope to repeat again soon. 
+            Fair warning: I'm writing this review in May 2021 (but backdating it to 12 January because that's when I finished the book), so my recollection of the events of the novel is a bit hazy. First things first, <a href="Anna_karenina.pdf" target="_blank">here's the compilation of my favorite passages</a>. <em>Anna Karenina</em> reminded me of <em>Middlemarch</em> in a lot of ways: both had a diverse and interwoven cast of fully-fleshed-out characters; both created a rich portrait of geographic space; both documented faithfully and accurately the various ways in which that space affected the lives of its inhabitants, and, conversely, how the characters imprinted onto that space; both had much to say about art and the perception of art. I liked Anna, Levin, Kitty, Koznyshev, and Oblonsky. I liked Levin's philosophizing on the theory of labour because I too think often about what it means to work and to employ. Are employers and employees fundamentally at odds? How ought a boss act and set policies? See <a href="Anna_karenina.pdf" target="_blank">pg. 344</a> for Levin's musings on this topic. My favorite scene was when Levin decided to work the fields alongside his labourers. Not only was it supremely entertaining, but it was a masterclass in using vivid imagination and empathy (on the part of Tolstoy) to explore complex social dynamics (between Levin and his employees, who had a mix of respect and disdain for him). We as readers of this scene were fortunate to see Levin grow and learn as he ponders the nature of labour while conducting first-hand research into the topic. I found it to be an absolutely brilliant forty-something pages. I hope you'll forgive the brevity of this review; certainly a book of this stature warrants much longer and more intelligent consideration, but frankly I don't have more to say. Reading it was a wonderful experience that I hope to repeat again soon.
           </p>
       </div> <!-- closing tag for Anna Karenina -->
 
